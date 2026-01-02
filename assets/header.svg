@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-label="kuraimoss header">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6E56CF"/>
+      <stop offset="45%" stop-color="#0EA5E9"/>
+      <stop offset="100%" stop-color="#14B8A6"/>
+      <animateTransform attributeName="gradientTransform" type="rotate" from="0 600 160" to="360 600 160" dur="18s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <animate attributeName="x1" values="-1200;1200" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0;2400" dur="8s" repeatCount="indefinite"/>
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="
+        1 0 0 0 0
+        0 1 0 0 0
+        0 0 1 0 0
+        0 0 0 0.22 0" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <mask id="typeMask">
+      <rect x="86" y="190" width="0" height="42" fill="#fff">
+        <animate attributeName="width" dur="5.2s" repeatCount="indefinite" keyTimes="0;0.58;0.84;1" values="0;860;860;0"/>
+      </rect>
+    </mask>
+  </defs>
+
+  <rect width="1200" height="320" fill="url(#bg)"/>
+  <rect width="1200" height="320" fill="url(#shine)"/>
+
+  <g opacity="0.18" filter="url(#softGlow)">
+    <circle cx="1020" cy="70" r="120" fill="#ffffff"/>
+    <circle cx="240" cy="270" r="150" fill="#ffffff"/>
+  </g>
+
+  <path d="M0 256 C 160 220, 360 300, 520 270 C 700 236, 860 220, 1200 268 L 1200 320 L 0 320 Z" fill="#0B1020" opacity="0.34"/>
+
+  <g fill="#ffffff">
+    <text x="84" y="136" font-family="Inter, Segoe UI, Roboto, Arial, sans-serif" font-size="54" font-weight="700" letter-spacing="0.5">
+      kuraimoss
+    </text>
+
+    <g mask="url(#typeMask)">
+      <text x="86" y="220" font-family="Inter, Segoe UI, Roboto, Arial, sans-serif" font-size="24" font-weight="600" opacity="0.92">
+        Building scalable systems • cloud infrastructure • ML products
+      </text>
+    </g>
+
+    <rect x="86" y="196" width="2" height="30" rx="1" fill="#ffffff" opacity="0.88">
+      <animate attributeName="x" dur="5.2s" repeatCount="indefinite" keyTimes="0;0.58;0.84;1" values="86;946;946;86"/>
+      <animate attributeName="opacity" values="0;1;0;1;0" dur="1.1s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>

@@ -1,12 +1,6 @@
 <div align="center">
-  <img
-    src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=32&duration=2400&pause=650&color=6E56CF&center=true&vCenter=true&width=900&lines=kuraimos;Fullstack+%E2%80%A2+Cloud+%E2%80%A2+Machine+Learning+%E2%80%A2+Mobile"
-    alt="Typing SVG"
-  />
-
-  <p>
-    Full-stack engineer focused on building reliable products end-to-end: UI, APIs, cloud infrastructure, and ML workflows.
-  </p>
+  <img src="./assets/header.svg" alt="kuraimoss header" width="100%" />
+  <p><b>Senior Full-Stack Engineer</b> building production-grade systems across web, cloud, and ML.</p>
 
   <a href="https://github.com/kuraimoss">
     <img
@@ -28,22 +22,33 @@
   </a>
 </div>
 
----
+<p align="center">
+  <img src="./assets/divider.svg" alt="" width="100%" height="28" />
+</p>
 
 ## About
 
-- Fullstack: React/Next.js, Node.js/Go APIs, and pragmatic database design
-- Cloud: Docker-first delivery, CI/CD, and scalable deployments
-- Machine Learning: experiments -> training/inference -> production mindset
-- Mobile: Flutter/Kotlin apps with clean architecture
+I ship end-to-end products with an engineering-first mindset: clean interfaces, scalable architecture, and reliability in production.
+
+- Full-stack: React/Next.js experiences backed by Node.js/Go services and pragmatic database design
+- Cloud: Docker-first delivery, CI/CD, observability, and repeatable deployments
+- ML: model evaluation and serving patterns that fit real product constraints
+- Mobile: Flutter/Kotlin apps with clean architecture (when it's the right tool)
 
 ## Tech Stack
 
 <div align="center">
-  <img
-    alt="Tech stack icons"
-    src="https://skillicons.dev/icons?i=ts,js,nodejs,react,nextjs,go,python,flutter,kotlin,aws,gcp,docker,postgres,sqlite,linux,ubuntu,bash,bootstrap&theme=dark"
-  />
+  <p><b>Frontend</b></p>
+  <img alt="Frontend" src="https://skillicons.dev/icons?i=ts,js,react,nextjs,bootstrap&theme=dark&perline=12" />
+
+  <p><b>Backend</b></p>
+  <img alt="Backend" src="https://skillicons.dev/icons?i=nodejs,go,python,postgres,sqlite&theme=dark&perline=12" />
+
+  <p><b>Cloud</b></p>
+  <img alt="Cloud" src="https://skillicons.dev/icons?i=docker,aws,gcp,linux,bash&theme=dark&perline=12" />
+
+  <p><b>ML</b></p>
+  <img alt="Machine Learning" src="https://skillicons.dev/icons?i=python,tensorflow,pytorch,sklearn,opencv&theme=dark&perline=12" />
 </div>
 
 ## GitHub Stats
@@ -62,6 +67,22 @@
       height="165"
       alt="GitHub stats"
       src="https://github-readme-stats-sigma-five.vercel.app/api?username=kuraimoss&show_icons=true&hide_border=true&bg_color=0d1117&title_color=6E56CF&icon_color=6E56CF&text_color=c9d1d9&ring_color=6E56CF"
+    />
+  </picture>
+
+  <picture>
+    <source
+      media="(prefers-color-scheme: dark)"
+      srcset="https://github-readme-streak-stats.herokuapp.com?user=kuraimoss&hide_border=true&background=0D1117&ring=6E56CF&fire=6E56CF&currStreakLabel=6E56CF&sideLabels=C9D1D9&dates=C9D1D9&sideNums=C9D1D9&currStreakNum=C9D1D9"
+    />
+    <source
+      media="(prefers-color-scheme: light)"
+      srcset="https://github-readme-streak-stats.herokuapp.com?user=kuraimoss&hide_border=true&background=FFFFFF&ring=6E56CF&fire=6E56CF&currStreakLabel=6E56CF&sideLabels=24292F&dates=24292F&sideNums=24292F&currStreakNum=24292F"
+    />
+    <img
+      height="165"
+      alt="GitHub streak stats"
+      src="https://github-readme-streak-stats.herokuapp.com?user=kuraimoss&hide_border=true&background=0D1117&ring=6E56CF&fire=6E56CF&currStreakLabel=6E56CF&sideLabels=C9D1D9&dates=C9D1D9&sideNums=C9D1D9&currStreakNum=C9D1D9"
     />
   </picture>
 
@@ -105,11 +126,11 @@ Selected work from https://kuraimos.com
 
 | Preview | Project | Links |
 | --- | --- | --- |
-| <img src="https://kuraimos.com/uploads/e736b4a4-46bd-4bcd-896a-57ca397622de.jpg" width="180" alt="Cloud Storage" /> | **Cloud Storage**<br/>Personal cloud storage web app to store, manage, and share files online. | [Demo](https://cloudstorage.kuraimos.com/) / [GitHub](https://github.com/kuraimoss/cloud-storage) |
-| <img src="https://kuraimos.com/uploads/5c3d259e-7c74-4500-bd3f-8e4366f6086b.jpg" width="180" alt="Lucky Draw" /> | **Lucky Draw**<br/>Interactive random name picker for events, giveaways, and doorprizes. | [Demo](https://luckydraw.kuraimos.com/) / [GitHub](https://github.com/kuraimoss/luckydraw) |
-| <img src="https://kuraimos.com/uploads/5cde3ffc-6f6a-4067-9623-5a8f0d212005.jpg" width="180" alt="Plat Detection API" /> | **Plat Detection API**<br/>AI-powered license plate detection + region lookup (Samsat). | [Demo](https://platdetection.kuraimos.com/) / [GitHub](https://github.com/kuraimoss/UAS-MachineLearning) |
-| <img src="https://kuraimos.com/uploads/4f7486c7-c5a9-4dda-9e61-9d4ad66d126a.jpg" width="180" alt="Media Downloader" /> | **Media Downloader**<br/>Download video/audio from YouTube, Instagram, and TikTok via URL. | [Demo](https://mediadownloader.web.id/) |
-| <img src="https://kuraimos.com/uploads/356ee8f2-3883-4e2c-96af-9938f01729ce.jpg" width="180" alt="Full-Stack Photography" /> | **Full-Stack Photography**<br/>Photography portfolio + admin system for invoices/quotations. | [Demo](https://christoophotography.com/) |
+| <img src="https://kuraimos.com/uploads/e736b4a4-46bd-4bcd-896a-57ca397622de.jpg" width="180" alt="Cloud Storage" /> | **Cloud Storage**<br/>Personal file storage platform with a focus on access control, reliable uploads, and scalable delivery. | [Demo](https://cloudstorage.kuraimos.com/) / [GitHub](https://github.com/kuraimoss/cloud-storage) |
+| <img src="https://kuraimos.com/uploads/5cde3ffc-6f6a-4067-9623-5a8f0d212005.jpg" width="180" alt="Plat Detection API" /> | **Plat Detection API**<br/>Computer-vision inference API for license plate detection with region lookup; designed as a deployable service. | [Demo](https://platdetection.kuraimos.com/) / [GitHub](https://github.com/kuraimoss/UAS-MachineLearning) |
+| <img src="https://kuraimos.com/uploads/5c3d259e-7c74-4500-bd3f-8e4366f6086b.jpg" width="180" alt="Lucky Draw" /> | **Lucky Draw**<br/>Event-ready random picker optimized for smooth presentation and consistent results across runs. | [Demo](https://luckydraw.kuraimos.com/) / [GitHub](https://github.com/kuraimoss/luckydraw) |
+| <img src="https://kuraimos.com/uploads/356ee8f2-3883-4e2c-96af-9938f01729ce.jpg" width="180" alt="Full-Stack Photography" /> | **Full-Stack Photography**<br/>Production portfolio + admin workflows (quotations/invoices) built with a maintainable full-stack approach. | [Demo](https://christoophotography.com/) |
+| <img src="https://kuraimos.com/uploads/4f7486c7-c5a9-4dda-9e61-9d4ad66d126a.jpg" width="180" alt="Media Downloader" /> | **Media Downloader**<br/>Multi-source media downloader with a focus on robustness and predictable output for end users. | [Demo](https://mediadownloader.web.id/) |
 
 ## Connect With Me
 
