@@ -49,38 +49,54 @@
 ## GitHub Stats
 
 <div align="center">
-  <img
-    height="165"
-    alt="GitHub stats"
-    src="https://github-readme-stats.vercel.app/api?username=kuraimoss&show_icons=true&hide_border=true&bg_color=0d1117&title_color=6E56CF&icon_color=6E56CF&text_color=c9d1d9&ring_color=6E56CF#gh-dark-mode-only"
-  />
-  <img
-    height="165"
-    alt="GitHub stats"
-    src="https://github-readme-stats.vercel.app/api?username=kuraimoss&show_icons=true&hide_border=true&bg_color=ffffff&title_color=6E56CF&icon_color=6E56CF&text_color=24292f&ring_color=6E56CF#gh-light-mode-only"
-  />
+  <picture>
+    <source
+      media="(prefers-color-scheme: dark)"
+      srcset="https://github-readme-stats-sigma-five.vercel.app/api?username=kuraimoss&show_icons=true&hide_border=true&bg_color=0d1117&title_color=6E56CF&icon_color=6E56CF&text_color=c9d1d9&ring_color=6E56CF"
+    />
+    <source
+      media="(prefers-color-scheme: light)"
+      srcset="https://github-readme-stats-sigma-five.vercel.app/api?username=kuraimoss&show_icons=true&hide_border=true&bg_color=ffffff&title_color=6E56CF&icon_color=6E56CF&text_color=24292f&ring_color=6E56CF"
+    />
+    <img
+      height="165"
+      alt="GitHub stats"
+      src="https://github-readme-stats-sigma-five.vercel.app/api?username=kuraimoss&show_icons=true&hide_border=true&bg_color=0d1117&title_color=6E56CF&icon_color=6E56CF&text_color=c9d1d9&ring_color=6E56CF"
+    />
+  </picture>
 
-  <img
-    height="165"
-    alt="Streak stats"
-    src="https://streak-stats.demolab.com?user=kuraimoss&hide_border=true&background=0D1117&ring=6E56CF&fire=6E56CF&currStreakLabel=c9d1d9&sideLabels=c9d1d9&dates=8b949e&stroke=30363d#gh-dark-mode-only"
-  />
-  <img
-    height="165"
-    alt="Streak stats"
-    src="https://streak-stats.demolab.com?user=kuraimoss&hide_border=true&background=FFFFFF&ring=6E56CF&fire=6E56CF&currStreakLabel=24292f&sideLabels=24292f&dates=57606a&stroke=d0d7de#gh-light-mode-only"
-  />
+  <picture>
+    <source
+      media="(prefers-color-scheme: dark)"
+      srcset="https://streak-stats.demolab.com?user=kuraimoss&hide_border=true&background=0D1117&ring=6E56CF&fire=6E56CF&currStreakLabel=c9d1d9&sideLabels=c9d1d9&dates=8b949e&stroke=30363d"
+    />
+    <source
+      media="(prefers-color-scheme: light)"
+      srcset="https://streak-stats.demolab.com?user=kuraimoss&hide_border=true&background=FFFFFF&ring=6E56CF&fire=6E56CF&currStreakLabel=24292f&sideLabels=24292f&dates=57606a&stroke=d0d7de"
+    />
+    <img
+      height="165"
+      alt="Streak stats"
+      src="https://streak-stats.demolab.com?user=kuraimoss&hide_border=true&background=0D1117&ring=6E56CF&fire=6E56CF&currStreakLabel=c9d1d9&sideLabels=c9d1d9&dates=8b949e&stroke=30363d"
+    />
+  </picture>
 </div>
 
 <div align="center">
-  <img
-    alt="Contribution graph"
-    src="https://github-readme-activity-graph.vercel.app/graph?username=kuraimoss&bg_color=0d1117&color=c9d1d9&line=6E56CF&point=c9d1d9&area=true&hide_border=true#gh-dark-mode-only"
-  />
-  <img
-    alt="Contribution graph"
-    src="https://github-readme-activity-graph.vercel.app/graph?username=kuraimoss&bg_color=ffffff&color=24292f&line=6E56CF&point=24292f&area=true&hide_border=true#gh-light-mode-only"
-  />
+  <picture>
+    <source
+      media="(prefers-color-scheme: dark)"
+      srcset="https://github-readme-activity-graph.vercel.app/graph?username=kuraimoss&bg_color=0d1117&color=c9d1d9&line=6E56CF&point=c9d1d9&area=true&hide_border=true"
+    />
+    <source
+      media="(prefers-color-scheme: light)"
+      srcset="https://github-readme-activity-graph.vercel.app/graph?username=kuraimoss&bg_color=ffffff&color=24292f&line=6E56CF&point=24292f&area=true&hide_border=true"
+    />
+    <img
+      alt="Contribution graph"
+      src="https://github-readme-activity-graph.vercel.app/graph?username=kuraimoss&bg_color=0d1117&color=c9d1d9&line=6E56CF&point=c9d1d9&area=true&hide_border=true"
+    />
+  </picture>
 </div>
 
 ## Featured Projects
@@ -95,9 +111,15 @@ Selected work from https://kuraimos.com
 | <img src="https://kuraimos.com/uploads/4f7486c7-c5a9-4dda-9e61-9d4ad66d126a.jpg" width="180" alt="Media Downloader" /> | **Media Downloader**<br/>Download video/audio from YouTube, Instagram, and TikTok via URL. | [Demo](https://mediadownloader.web.id/) |
 | <img src="https://kuraimos.com/uploads/356ee8f2-3883-4e2c-96af-9938f01729ce.jpg" width="180" alt="Full-Stack Photography" /> | **Full-Stack Photography**<br/>Photography portfolio + admin system for invoices/quotations. | [Demo](https://christoophotography.com/) |
 
-## Contact
+## Connect With Me
 
 <div align="center">
+  <a href="https://github.com/kuraimoss">
+    <img
+      alt="GitHub"
+      src="https://img.shields.io/badge/GitHub-follow-6E56CF?style=flat&logo=github&logoColor=white"
+    />
+  </a>
   <a href="https://kuraimos.com">
     <img
       alt="Website"
