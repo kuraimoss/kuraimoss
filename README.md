@@ -68,16 +68,16 @@
   <picture>
     <source
       media="(prefers-color-scheme: dark)"
-      srcset="https://streak-stats.demolab.com?user=kuraimoss&hide_border=true&background=0D1117&ring=6E56CF&fire=6E56CF&currStreakLabel=c9d1d9&sideLabels=c9d1d9&dates=8b949e&stroke=30363d"
+      srcset="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=kuraimoss&layout=compact&hide_border=true&bg_color=0d1117&title_color=6E56CF&text_color=c9d1d9"
     />
     <source
       media="(prefers-color-scheme: light)"
-      srcset="https://streak-stats.demolab.com?user=kuraimoss&hide_border=true&background=FFFFFF&ring=6E56CF&fire=6E56CF&currStreakLabel=24292f&sideLabels=24292f&dates=57606a&stroke=d0d7de"
+      srcset="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=kuraimoss&layout=compact&hide_border=true&bg_color=ffffff&title_color=6E56CF&text_color=24292f"
     />
     <img
       height="165"
-      alt="Streak stats"
-      src="https://streak-stats.demolab.com?user=kuraimoss&hide_border=true&background=0D1117&ring=6E56CF&fire=6E56CF&currStreakLabel=c9d1d9&sideLabels=c9d1d9&dates=8b949e&stroke=30363d"
+      alt="Top languages"
+      src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=kuraimoss&layout=compact&hide_border=true&bg_color=0d1117&title_color=6E56CF&text_color=c9d1d9"
     />
   </picture>
 </div>
