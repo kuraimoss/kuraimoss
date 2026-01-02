@@ -47,10 +47,10 @@ Engineering-first builder focused on maintainable architecture, predictable deli
   <img alt="Mobile" src="https://skillicons.dev/icons?i=flutter,kotlin,firebase&theme=dark&perline=12&size=44" />
 
   <p><b>Backend</b></p>
-  <img alt="Backend" src="https://skillicons.dev/icons?i=nodejs,go,python,postgres,sqlite&theme=dark&perline=12&size=44" />
+  <img alt="Backend" src="https://skillicons.dev/icons?i=nodejs,go,python,postgresql,sqlite&theme=dark&perline=12&size=44" />
 
   <p><b>Cloud</b></p>
-  <img alt="Cloud" src="https://skillicons.dev/icons?i=docker,aws,gcp,linux,bash&theme=dark&perline=12&size=44" />
+  <img alt="Cloud" src="https://skillicons.dev/icons?i=docker,azure,aws,gcp,linux,ubuntu,bash&theme=dark&perline=12&size=44" />
 
   <p><b>ML</b></p>
   <img alt="Machine Learning" src="https://skillicons.dev/icons?i=python,tensorflow,pytorch,sklearn,opencv&theme=dark&perline=12&size=44" />
