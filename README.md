@@ -1,6 +1,6 @@
 <div align="center">
-  <img src="./assets/header.svg" alt="kuraimoss header" width="100%" />
-  <p><b>Senior Full-Stack Engineer</b> building production-grade systems across web, cloud, and ML.</p>
+  <img src="./assets/header.svg" alt="kuraimos header" width="100%" />
+  <p><b>Senior Full-Stack &amp; Mobile Engineer</b> building production-grade systems across web, mobile, cloud, and ML.</p>
 
   <a href="https://github.com/kuraimoss">
     <img
@@ -43,6 +43,9 @@ I ship end-to-end products with an engineering-first mindset: clean interfaces, 
 
   <p><b>Backend</b></p>
   <img alt="Backend" src="https://skillicons.dev/icons?i=nodejs,go,python,postgres,sqlite&theme=dark&perline=12" />
+
+  <p><b>Mobile</b></p>
+  <img alt="Mobile" src="https://skillicons.dev/icons?i=flutter,kotlin,firebase&theme=dark&perline=12" />
 
   <p><b>Cloud</b></p>
   <img alt="Cloud" src="https://skillicons.dev/icons?i=docker,aws,gcp,linux,bash&theme=dark&perline=12" />
