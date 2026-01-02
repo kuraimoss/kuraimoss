@@ -4,7 +4,7 @@
     alt="Typing SVG"
   />
 
-  <p>Full-stack engineer focused on building reliable products end-to-end: UI, APIs, cloud infrastructure, and ML workflows.</p>
+  <p>Full-stack &amp; mobile engineer shipping reliable products end-to-end: UI, APIs, cloud infrastructure, and ML workflows.</p>
 
   <a href="https://github.com/kuraimoss">
     <img
@@ -30,30 +30,30 @@
 
 ## About
 
-I ship end-to-end products with an engineering-first mindset: clean interfaces, scalable architecture, and reliability in production.
+Engineering-first builder focused on maintainable architecture, predictable delivery, and production reliability.
 
-- Full-stack: React/Next.js experiences backed by Node.js/Go services and pragmatic database design
-- Cloud: Docker-first delivery, CI/CD, observability, and repeatable deployments
-- ML: model evaluation and serving patterns that fit real product constraints
-- Mobile: Flutter/Kotlin apps with clean architecture (when it's the right tool)
+- Web & Mobile: React/Next.js experiences and Flutter/Kotlin apps with clean architecture
+- Backend: Node.js/Go services, API design, and pragmatic database modeling
+- Cloud: Docker-first delivery, CI/CD, and observability for scalable deployments
+- ML: experimentation, evaluation, and deployable inference patterns
 
 ## Tech Stack
 
 <div align="center">
   <p><b>Frontend</b></p>
-  <img alt="Frontend" src="https://skillicons.dev/icons?i=ts,js,react,nextjs,bootstrap&theme=dark&perline=12" />
-
-  <p><b>Backend</b></p>
-  <img alt="Backend" src="https://skillicons.dev/icons?i=nodejs,go,python,postgres,sqlite&theme=dark&perline=12" />
+  <img alt="Frontend" src="https://skillicons.dev/icons?i=ts,js,react,nextjs,bootstrap&theme=dark&perline=12&size=44" />
 
   <p><b>Mobile</b></p>
-  <img alt="Mobile" src="https://skillicons.dev/icons?i=flutter,kotlin,firebase&theme=dark&perline=12" />
+  <img alt="Mobile" src="https://skillicons.dev/icons?i=flutter,kotlin,firebase&theme=dark&perline=12&size=44" />
+
+  <p><b>Backend</b></p>
+  <img alt="Backend" src="https://skillicons.dev/icons?i=nodejs,go,python,postgres,sqlite&theme=dark&perline=12&size=44" />
 
   <p><b>Cloud</b></p>
-  <img alt="Cloud" src="https://skillicons.dev/icons?i=docker,aws,gcp,linux,bash&theme=dark&perline=12" />
+  <img alt="Cloud" src="https://skillicons.dev/icons?i=docker,aws,gcp,linux,bash&theme=dark&perline=12&size=44" />
 
   <p><b>ML</b></p>
-  <img alt="Machine Learning" src="https://skillicons.dev/icons?i=python,tensorflow,pytorch,sklearn,opencv&theme=dark&perline=12" />
+  <img alt="Machine Learning" src="https://skillicons.dev/icons?i=python,tensorflow,pytorch,sklearn,opencv&theme=dark&perline=12&size=44" />
 </div>
 
 ## GitHub Stats
@@ -90,7 +90,9 @@ I ship end-to-end products with an engineering-first mindset: clean interfaces, 
       src="https://github-readme-streak-stats.herokuapp.com?user=kuraimoss&hide_border=true&background=0D1117&ring=6E56CF&fire=6E56CF&currStreakLabel=6E56CF&sideLabels=C9D1D9&dates=C9D1D9&sideNums=C9D1D9&currStreakNum=C9D1D9"
     />
   </picture>
+</div>
 
+<div align="center">
   <picture>
     <source
       media="(prefers-color-scheme: dark)"
