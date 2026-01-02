@@ -1,6 +1,6 @@
 <div align="center">
   <img src="./assets/header.svg" alt="kuraimos header" width="100%" />
-  <p><b>Senior Full-Stack &amp; Mobile Engineer</b> building production-grade systems across web, mobile, cloud, and ML.</p>
+  <p>Full-stack engineer focused on building reliable products end-to-end: UI, APIs, cloud infrastructure, and ML workflows.</p>
 
   <a href="https://github.com/kuraimoss">
     <img
