@@ -1,5 +1,9 @@
 <div align="center">
-  <img src="./assets/header.svg" alt="kuraimos header" width="100%" />
+  <img
+    src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=32&duration=2400&pause=650&color=6E56CF&center=true&vCenter=true&width=900&lines=kuraimos;Fullstack+%E2%80%A2+Cloud+%E2%80%A2+Machine+Learning+%E2%80%A2+Mobile"
+    alt="Typing SVG"
+  />
+
   <p>Full-stack engineer focused on building reliable products end-to-end: UI, APIs, cloud infrastructure, and ML workflows.</p>
 
   <a href="https://github.com/kuraimoss">
@@ -22,9 +26,7 @@
   </a>
 </div>
 
-<p align="center">
-  <img src="./assets/divider.svg" alt="" width="100%" height="28" />
-</p>
+---
 
 ## About
 
