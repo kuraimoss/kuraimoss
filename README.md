@@ -1,6 +1,6 @@
 <div align="center">
   <img
-    src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=32&duration=2400&pause=650&color=6E56CF&center=true&vCenter=true&width=900&lines=Kurai+Moss;Fullstack+%E2%80%A2+Cloud+%E2%80%A2+Machine+Learning+%E2%80%A2+Mobile"
+    src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=32&duration=2400&pause=650&color=6E56CF&center=true&vCenter=true&width=900&lines=kuraimos;Fullstack+%E2%80%A2+Cloud+%E2%80%A2+Machine+Learning+%E2%80%A2+Mobile"
     alt="Typing SVG"
   />
 
@@ -20,6 +20,12 @@
       src="https://img.shields.io/badge/Repos-Explore-6E56CF?style=flat&logo=github&logoColor=white"
     />
   </a>
+  <a href="https://github.com/kuraimoss">
+    <img
+      alt="Profile views"
+      src="https://komarev.com/ghpvc/?username=kuraimoss&label=Profile%20views&color=6E56CF&style=flat"
+    />
+  </a>
 </div>
 
 ---
@@ -36,7 +42,7 @@
 <div align="center">
   <img
     alt="Tech stack icons"
-    src="https://skillicons.dev/icons?i=ts,js,nodejs,react,nextjs,go,python,flutter,kotlin,aws,gcp,docker,postgres&theme=dark"
+    src="https://skillicons.dev/icons?i=ts,js,nodejs,react,nextjs,go,python,flutter,kotlin,aws,gcp,docker,postgres,sqlite,linux,ubuntu,bash,bootstrap&theme=dark"
   />
 </div>
 
@@ -79,52 +85,35 @@
 
 ## Featured Projects
 
-<div align="center">
-  <a href="https://github.com/kuraimoss/cloud-storage">
-    <img
-      alt="cloud-storage"
-      src="https://github-readme-stats.vercel.app/api/pin/?username=kuraimoss&repo=cloud-storage&hide_border=true&bg_color=0d1117&title_color=6E56CF&icon_color=6E56CF&text_color=c9d1d9#gh-dark-mode-only"
-    />
-    <img
-      alt="cloud-storage"
-      src="https://github-readme-stats.vercel.app/api/pin/?username=kuraimoss&repo=cloud-storage&hide_border=true&bg_color=ffffff&title_color=6E56CF&icon_color=6E56CF&text_color=24292f#gh-light-mode-only"
-    />
-  </a>
-  <a href="https://github.com/kuraimoss/UAS-MachineLearning">
-    <img
-      alt="UAS-MachineLearning"
-      src="https://github-readme-stats.vercel.app/api/pin/?username=kuraimoss&repo=UAS-MachineLearning&hide_border=true&bg_color=0d1117&title_color=6E56CF&icon_color=6E56CF&text_color=c9d1d9#gh-dark-mode-only"
-    />
-    <img
-      alt="UAS-MachineLearning"
-      src="https://github-readme-stats.vercel.app/api/pin/?username=kuraimoss&repo=UAS-MachineLearning&hide_border=true&bg_color=ffffff&title_color=6E56CF&icon_color=6E56CF&text_color=24292f#gh-light-mode-only"
-    />
-  </a>
-  <a href="https://github.com/kuraimoss/project-capstone-asah">
-    <img
-      alt="project-capstone-asah"
-      src="https://github-readme-stats.vercel.app/api/pin/?username=kuraimoss&repo=project-capstone-asah&hide_border=true&bg_color=0d1117&title_color=6E56CF&icon_color=6E56CF&text_color=c9d1d9#gh-dark-mode-only"
-    />
-    <img
-      alt="project-capstone-asah"
-      src="https://github-readme-stats.vercel.app/api/pin/?username=kuraimoss&repo=project-capstone-asah&hide_border=true&bg_color=ffffff&title_color=6E56CF&icon_color=6E56CF&text_color=24292f#gh-light-mode-only"
-    />
-  </a>
-  <a href="https://github.com/kuraimoss/edubrightfrontend">
-    <img
-      alt="edubrightfrontend"
-      src="https://github-readme-stats.vercel.app/api/pin/?username=kuraimoss&repo=edubrightfrontend&hide_border=true&bg_color=0d1117&title_color=6E56CF&icon_color=6E56CF&text_color=c9d1d9#gh-dark-mode-only"
-    />
-    <img
-      alt="edubrightfrontend"
-      src="https://github-readme-stats.vercel.app/api/pin/?username=kuraimoss&repo=edubrightfrontend&hide_border=true&bg_color=ffffff&title_color=6E56CF&icon_color=6E56CF&text_color=24292f#gh-light-mode-only"
-    />
-  </a>
-</div>
+Selected work from https://kuraimos.com
+
+| Preview | Project | Links |
+| --- | --- | --- |
+| <img src="https://kuraimos.com/uploads/e736b4a4-46bd-4bcd-896a-57ca397622de.jpg" width="180" alt="Cloud Storage" /> | **Cloud Storage**<br/>Personal cloud storage web app to store, manage, and share files online. | [Demo](https://cloudstorage.kuraimos.com/) / [GitHub](https://github.com/kuraimoss/cloud-storage) |
+| <img src="https://kuraimos.com/uploads/5c3d259e-7c74-4500-bd3f-8e4366f6086b.jpg" width="180" alt="Lucky Draw" /> | **Lucky Draw**<br/>Interactive random name picker for events, giveaways, and doorprizes. | [Demo](https://luckydraw.kuraimos.com/) / [GitHub](https://github.com/kuraimoss/luckydraw) |
+| <img src="https://kuraimos.com/uploads/5cde3ffc-6f6a-4067-9623-5a8f0d212005.jpg" width="180" alt="Plat Detection API" /> | **Plat Detection API**<br/>AI-powered license plate detection + region lookup (Samsat). | [Demo](https://platdetection.kuraimos.com/) / [GitHub](https://github.com/kuraimoss/UAS-MachineLearning) |
+| <img src="https://kuraimos.com/uploads/4f7486c7-c5a9-4dda-9e61-9d4ad66d126a.jpg" width="180" alt="Media Downloader" /> | **Media Downloader**<br/>Download video/audio from YouTube, Instagram, and TikTok via URL. | [Demo](https://mediadownloader.web.id/) |
+| <img src="https://kuraimos.com/uploads/356ee8f2-3883-4e2c-96af-9938f01729ce.jpg" width="180" alt="Full-Stack Photography" /> | **Full-Stack Photography**<br/>Photography portfolio + admin system for invoices/quotations. | [Demo](https://christoophotography.com/) |
 
 ## Contact
 
-<!-- Replace the placeholders below with your real links. -->
-- GitHub: https://github.com/kuraimoss
-- Email: your.email@domain.com
-- LinkedIn: https://www.linkedin.com/in/your-handle
+<div align="center">
+  <a href="https://kuraimos.com">
+    <img
+      alt="Website"
+      src="https://img.shields.io/badge/Website-kuraimos.com-6E56CF?style=flat&logo=google-chrome&logoColor=white"
+    />
+  </a>
+  <a href="https://www.linkedin.com/in/saintripentumanggor">
+    <img
+      alt="LinkedIn"
+      src="https://img.shields.io/badge/LinkedIn-connect-6E56CF?style=flat&logo=linkedin&logoColor=white"
+    />
+  </a>
+  <a href="https://www.instagram.com/kuraimos">
+    <img
+      alt="Instagram"
+      src="https://img.shields.io/badge/Instagram-@kuraimos-6E56CF?style=flat&logo=instagram&logoColor=white"
+    />
+  </a>
+</div>
