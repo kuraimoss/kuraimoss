@@ -78,16 +78,16 @@ Engineering-first builder focused on maintainable architecture, predictable deli
   <picture>
     <source
       media="(prefers-color-scheme: dark)"
-      srcset="https://github-readme-streak-stats.herokuapp.com?user=kuraimoss&hide_border=true&background=0D1117&ring=6E56CF&fire=6E56CF&currStreakLabel=6E56CF&sideLabels=C9D1D9&dates=C9D1D9&sideNums=C9D1D9&currStreakNum=C9D1D9"
+      srcset="https://streak-stats.demolab.com?user=kuraimoss&hide_border=true&background=0D1117&ring=6E56CF&fire=6E56CF&currStreakLabel=6E56CF&sideLabels=C9D1D9&dates=C9D1D9&sideNums=C9D1D9&currStreakNum=C9D1D9"
     />
     <source
       media="(prefers-color-scheme: light)"
-      srcset="https://github-readme-streak-stats.herokuapp.com?user=kuraimoss&hide_border=true&background=FFFFFF&ring=6E56CF&fire=6E56CF&currStreakLabel=6E56CF&sideLabels=24292F&dates=24292F&sideNums=24292F&currStreakNum=24292F"
+      srcset="https://streak-stats.demolab.com?user=kuraimoss&hide_border=true&background=FFFFFF&ring=6E56CF&fire=6E56CF&currStreakLabel=6E56CF&sideLabels=24292F&dates=24292F&sideNums=24292F&currStreakNum=24292F"
     />
     <img
       height="165"
       alt="GitHub streak stats"
-      src="https://github-readme-streak-stats.herokuapp.com?user=kuraimoss&hide_border=true&background=0D1117&ring=6E56CF&fire=6E56CF&currStreakLabel=6E56CF&sideLabels=C9D1D9&dates=C9D1D9&sideNums=C9D1D9&currStreakNum=C9D1D9"
+      src="https://streak-stats.demolab.com?user=kuraimoss&hide_border=true&background=0D1117&ring=6E56CF&fire=6E56CF&currStreakLabel=6E56CF&sideLabels=C9D1D9&dates=C9D1D9&sideNums=C9D1D9&currStreakNum=C9D1D9"
     />
   </picture>
 </div>
