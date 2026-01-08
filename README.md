@@ -78,16 +78,16 @@ Engineering-first builder focused on maintainable architecture, predictable deli
   <picture>
     <source
       media="(prefers-color-scheme: dark)"
-      srcset="https://streak-stats.demolab.com?user=kuraimoss&hide_border=true&background=0D1117&ring=6E56CF&fire=6E56CF&currStreakLabel=6E56CF&sideLabels=C9D1D9&dates=C9D1D9&sideNums=C9D1D9&currStreakNum=C9D1D9"
+      srcset="https://streak-stats.vercel.app?user=kuraimoss&hide_border=true&background=0D1117&ring=6E56CF&fire=6E56CF&currStreakLabel=6E56CF&sideLabels=C9D1D9&dates=C9D1D9&sideNums=C9D1D9&currStreakNum=C9D1D9"
     />
     <source
       media="(prefers-color-scheme: light)"
-      srcset="https://streak-stats.demolab.com?user=kuraimoss&hide_border=true&background=FFFFFF&ring=6E56CF&fire=6E56CF&currStreakLabel=6E56CF&sideLabels=24292F&dates=24292F&sideNums=24292F&currStreakNum=24292F"
+      srcset="https://streak-stats.vercel.app?user=kuraimoss&hide_border=true&background=FFFFFF&ring=6E56CF&fire=6E56CF&currStreakLabel=6E56CF&sideLabels=24292F&dates=24292F&sideNums=24292F&currStreakNum=24292F"
     />
     <img
       height="165"
       alt="GitHub streak stats"
-      src="https://streak-stats.demolab.com?user=kuraimoss&hide_border=true&background=0D1117&ring=6E56CF&fire=6E56CF&currStreakLabel=6E56CF&sideLabels=C9D1D9&dates=C9D1D9&sideNums=C9D1D9&currStreakNum=C9D1D9"
+      src="https://streak-stats.vercel.app?user=kuraimoss&hide_border=true&background=0D1117&ring=6E56CF&fire=6E56CF&currStreakLabel=6E56CF&sideLabels=C9D1D9&dates=C9D1D9&sideNums=C9D1D9&currStreakNum=C9D1D9"
     />
   </picture>
 </div>
@@ -133,11 +133,12 @@ Selected work from https://kuraimos.com
 
 | Preview | Project | Links |
 | --- | --- | --- |
-| <img src="https://kuraimos.com/uploads/eb5a21b4-3016-4c74-b7fb-2ed152068428.jpg" width="180" alt="Cloud Storage" /> | **Cloud Storage**<br/>Personal file storage platform with a focus on access control, reliable uploads, and scalable delivery. | [Demo](https://cloudstorage.kuraimos.com/) / [GitHub](https://github.com/kuraimoss/cloud-storage) |
-| <img src="https://kuraimos.com/uploads/3f68c7bc-46c9-45eb-a279-4883e001b6dc.jpg" width="180" alt="Plat Detection API" /> | **Plat Detection API**<br/>Computer-vision inference API for license plate detection with region lookup; designed as a deployable service. | [Demo](https://platdetection.kuraimos.com/) / [GitHub](https://github.com/kuraimoss/UAS-MachineLearning) |
-| <img src="https://kuraimos.com/uploads/b63e0194-0e56-4cc7-b29d-f63e2b30ad0f.jpg" width="180" alt="Lucky Draw" /> | **Lucky Draw**<br/>Event-ready random picker optimized for smooth presentation and consistent results across runs. | [Demo](https://luckydraw.kuraimos.com/) / [GitHub](https://github.com/kuraimoss/luckydraw) |
-| <img src="https://kuraimos.com/uploads/8fbaa281-2a85-467e-b1af-5bead8bff787.jpg" width="180" alt="Full-Stack Photography" /> | **Full-Stack Photography**<br/>Production portfolio + admin workflows (quotations/invoices) built with a maintainable full-stack approach. | [Demo](https://christoophotography.com/) |
-| <img src="https://kuraimos.com/uploads/e813a58a-09b4-4f75-9d51-1d4413763995.jpg" width="180" alt="Media Downloader" /> | **Media Downloader**<br/>Multi-source media downloader with a focus on robustness and predictable output for end users. | [Demo](https://mediadownloader.web.id/) |
+| <img src="https://kuraimos.com/uploads/6ffca5ab-5218-4c7d-819f-4fa68fa9d13f.jpg" width="180" alt="kuraBOT - AI Automation Bot WhatsApp" /> | **kuraBOT - AI Automation Bot WhatsApp**<br/>Asisten WhatsApp dengan AI, downloader, dan fitur admin grup untuk otomatisasi produktivitas. | [Demo](https://wa.me/6281943514940?text=Haloo%20kuraBOT) |
+| <img src="https://kuraimos.com/uploads/eb5a21b4-3016-4c74-b7fb-2ed152068428.jpg" width="180" alt="Cloud Storage" /> | **Cloud Storage**<br/>Aplikasi cloud storage pribadi untuk menyimpan, mengelola, dan berbagi file secara online. | [Demo](https://cloudstorage.kuraimos.com/) / [GitHub](https://github.com/kuraimoss/cloud-storage.git) |
+| <img src="https://kuraimos.com/uploads/b63e0194-0e56-4cc7-b29d-f63e2b30ad0f.jpg" width="180" alt="Lucky Draw" /> | **Lucky Draw**<br/>Aplikasi random name picker untuk undian/lucky draw digital yang fair dan interaktif. | [Demo](https://luckydraw.kuraimos.com/) / [GitHub](https://github.com/kuraimoss/luckydraw.git) |
+| <img src="https://kuraimos.com/uploads/3f68c7bc-46c9-45eb-a279-4883e001b6dc.jpg" width="180" alt="Plat Detection API" /> | **Plat Detection API**<br/>Aplikasi deteksi plat nomor berbasis AI dengan lookup wilayah Samsat. | [Demo](https://platdetection.kuraimos.com/) / [GitHub](https://github.com/kuraimoss/UAS-MachineLearning.git) |
+| <img src="https://kuraimos.com/uploads/e813a58a-09b4-4f75-9d51-1d4413763995.jpg" width="180" alt="Media Downloader" /> | **Media Downloader**<br/>Aplikasi web untuk mengunduh video atau audio dari YouTube, Instagram, dan TikTok. | [Demo](https://mediadownloader.web.id/) |
+| <img src="https://kuraimos.com/uploads/8fbaa281-2a85-467e-b1af-5bead8bff787.jpg" width="180" alt="Full-Stack Photography" /> | **Full-Stack Photography**<br/>Portfolio fotografi + admin untuk quotation/invoice klien dalam satu platform. | [Demo](https://christoophotography.com/) |
 
 ## Connect With Me
 
