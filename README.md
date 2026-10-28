@@ -62,16 +62,16 @@ Engineering-first builder focused on maintainable architecture, predictable deli
   <picture>
     <source
       media="(prefers-color-scheme: dark)"
-      srcset="https://github-readme-stats.vercel.app/api?username=kuraimoss&show_icons=true&hide_border=true&bg_color=0d1117&title_color=6E56CF&icon_color=6E56CF&text_color=c9d1d9&ring_color=6E56CF"
+      srcset="https://github-readme-stats.vercel.app/api?username=kuraimoss&show_icons=true&hide_border=true&bg_color=0d1117&title_color=6E56CF&icon_color=6E56CF&text_color=c9d1d9&ring_color=6E56CF&cache_seconds=21600"
     />
     <source
       media="(prefers-color-scheme: light)"
-      srcset="https://github-readme-stats.vercel.app/api?username=kuraimoss&show_icons=true&hide_border=true&bg_color=ffffff&title_color=6E56CF&icon_color=6E56CF&text_color=24292f&ring_color=6E56CF"
+      srcset="https://github-readme-stats.vercel.app/api?username=kuraimoss&show_icons=true&hide_border=true&bg_color=ffffff&title_color=6E56CF&icon_color=6E56CF&text_color=24292f&ring_color=6E56CF&cache_seconds=21600"
     />
     <img
       height="165"
       alt="GitHub stats"
-      src="https://github-readme-stats.vercel.app/api?username=kuraimoss&show_icons=true&hide_border=true&bg_color=0d1117&title_color=6E56CF&icon_color=6E56CF&text_color=c9d1d9&ring_color=6E56CF"
+      src="https://github-readme-stats.vercel.app/api?username=kuraimoss&show_icons=true&hide_border=true&bg_color=0d1117&title_color=6E56CF&icon_color=6E56CF&text_color=c9d1d9&ring_color=6E56CF&cache_seconds=21600"
     />
   </picture>
 
@@ -96,16 +96,16 @@ Engineering-first builder focused on maintainable architecture, predictable deli
   <picture>
     <source
       media="(prefers-color-scheme: dark)"
-      srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=kuraimoss&layout=compact&hide_border=true&bg_color=0d1117&title_color=6E56CF&text_color=c9d1d9"
+      srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=kuraimoss&layout=compact&hide_border=true&bg_color=0d1117&title_color=6E56CF&text_color=c9d1d9&cache_seconds=21600"
     />
     <source
       media="(prefers-color-scheme: light)"
-      srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=kuraimoss&layout=compact&hide_border=true&bg_color=ffffff&title_color=6E56CF&text_color=24292f"
+      srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=kuraimoss&layout=compact&hide_border=true&bg_color=ffffff&title_color=6E56CF&text_color=24292f&cache_seconds=21600"
     />
     <img
       height="165"
       alt="Top languages"
-      src="https://github-readme-stats.vercel.app/api/top-langs/?username=kuraimoss&layout=compact&hide_border=true&bg_color=0d1117&title_color=6E56CF&text_color=c9d1d9"
+      src="https://github-readme-stats.vercel.app/api/top-langs/?username=kuraimoss&layout=compact&hide_border=true&bg_color=0d1117&title_color=6E56CF&text_color=c9d1d9&cache_seconds=21600"
     />
   </picture>
 </div>
