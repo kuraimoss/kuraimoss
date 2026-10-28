@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">kuraimos - Full-stack and mobile engineer</title>
+  <desc id="desc">From interface to infrastructure. Web, mobile, cloud, and applied machine learning.</desc>
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="1200" y2="360" gradientUnits="userSpaceOnUse"><stop stop-color="#0C0D18"/><stop offset="1" stop-color="#17112B"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#C4B5FD"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#6E56CF" stop-opacity=".25"/><stop offset="1" stop-color="#6E56CF" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" stroke="#C4B5FD" stroke-opacity=".055"/></pattern>
+    <clipPath id="frame"><rect x="1" y="1" width="1198" height="358" rx="24"/></clipPath>
+  </defs>
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="360" fill="url(#base)"/>
+    <rect width="1200" height="360" fill="url(#grid)"/>
+    <ellipse cx="1005" cy="155" rx="390" ry="300" fill="url(#glow)"/>
+    <path d="M745 0V360" stroke="#A78BFA" stroke-opacity=".1"/>
+    <path d="M765 311H1136" stroke="#A78BFA" stroke-opacity=".18"/>
+    <rect x="54" y="44" width="32" height="32" rx="10" fill="#6E56CF"/>
+    <path d="M64 51V69M74 51L65 60L75 69" stroke="white" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="101" y="65" fill="#BAAFD9" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" letter-spacing="2.4">ENGINEER / BUILDER</text>
+    <text x="52" y="164" fill="#F7F5FF" font-family="Arial,Helvetica,sans-serif" font-size="78" font-weight="700" letter-spacing="-4">kuraimos<tspan fill="#A78BFA">.</tspan></text>
+    <text x="56" y="213" fill="#E2DDED" font-family="Arial,Helvetica,sans-serif" font-size="23">Full-stack &amp; mobile engineer.</text>
+    <text x="56" y="245" fill="#A8A0BB" font-family="Arial,Helvetica,sans-serif" font-size="23">From interface to infrastructure.</text>
+    <g font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="700" letter-spacing="1.5" fill="#D7CFF0">
+      <rect x="56" y="282" width="61" height="27" rx="13.5" fill="#211A37" stroke="#3B2B5C"/><text x="72" y="299">WEB</text>
+      <rect x="127" y="282" width="85" height="27" rx="13.5" fill="#211A37" stroke="#3B2B5C"/><text x="143" y="299">MOBILE</text>
+      <rect x="222" y="282" width="79" height="27" rx="13.5" fill="#211A37" stroke="#3B2B5C"/><text x="238" y="299">CLOUD</text>
+      <rect x="311" y="282" width="116" height="27" rx="13.5" fill="#211A37" stroke="#3B2B5C"/><text x="327" y="299">APPLIED ML</text>
+    </g>
+    <path d="M1090 108H1120V169H1110M835 181H806V244H820" stroke="#8B72D8" stroke-width="1.5" stroke-dasharray="4 5"/>
+    <circle cx="1120" cy="140" r="4" fill="#B4A0FF"/>
+    <circle cx="806" cy="214" r="4" fill="#B4A0FF"/>
+    <g font-family="Arial,Helvetica,sans-serif">
+      <rect x="790" y="76" width="296" height="64" rx="13" fill="#161426" stroke="#443460"/>
+      <rect x="806" y="91" width="33" height="33" rx="9" fill="#2D2146"/><text x="814" y="112" fill="#C4B5FD" font-size="12" font-weight="700">01</text>
+      <text x="855" y="103" fill="#F0EBFA" font-size="17" font-weight="700">Interfaces</text><text x="855" y="122" fill="#A8A0BB" font-size="11">WEB + MOBILE</text>
+      <rect x="832" y="153" width="296" height="64" rx="13" fill="#1D1631" stroke="#6E56CF"/>
+      <rect x="848" y="168" width="33" height="33" rx="9" fill="#3D2B60"/><text x="856" y="189" fill="#D5C6FF" font-size="12" font-weight="700">02</text>
+      <text x="897" y="180" fill="#F0EBFA" font-size="17" font-weight="700">Services</text><text x="897" y="199" fill="#B3A5CB" font-size="11">APIs + DATA</text>
+      <rect x="790" y="230" width="296" height="64" rx="13" fill="#161426" stroke="#443460"/>
+      <rect x="806" y="245" width="33" height="33" rx="9" fill="#2D2146"/><text x="814" y="266" fill="#C4B5FD" font-size="12" font-weight="700">03</text>
+      <text x="855" y="257" fill="#F0EBFA" font-size="17" font-weight="700">Infrastructure</text><text x="855" y="276" fill="#A8A0BB" font-size="11">CLOUD + DEPLOY</text>
+    </g>
+    <text x="790" y="333" fill="#8F82AC" font-family="monospace" font-size="10" letter-spacing="2">BUILD / SHIP / ITERATE</text>
+  </g>
+  <rect x=".5" y=".5" width="1199" height="359" rx="24" stroke="#3A2D54"/>
+</svg>
