@@ -62,16 +62,16 @@ Engineering-first builder focused on maintainable architecture, predictable deli
   <picture>
     <source
       media="(prefers-color-scheme: dark)"
-      srcset="https://github-readme-stats-sigma-five.vercel.app/api?username=kuraimoss&show_icons=true&hide_border=true&bg_color=0d1117&title_color=6E56CF&icon_color=6E56CF&text_color=c9d1d9&ring_color=6E56CF"
+      srcset="https://github-readme-stats.vercel.app/api?username=kuraimoss&show_icons=true&hide_border=true&bg_color=0d1117&title_color=6E56CF&icon_color=6E56CF&text_color=c9d1d9&ring_color=6E56CF"
     />
     <source
       media="(prefers-color-scheme: light)"
-      srcset="https://github-readme-stats-sigma-five.vercel.app/api?username=kuraimoss&show_icons=true&hide_border=true&bg_color=ffffff&title_color=6E56CF&icon_color=6E56CF&text_color=24292f&ring_color=6E56CF"
+      srcset="https://github-readme-stats.vercel.app/api?username=kuraimoss&show_icons=true&hide_border=true&bg_color=ffffff&title_color=6E56CF&icon_color=6E56CF&text_color=24292f&ring_color=6E56CF"
     />
     <img
       height="165"
       alt="GitHub stats"
-      src="https://github-readme-stats-sigma-five.vercel.app/api?username=kuraimoss&show_icons=true&hide_border=true&bg_color=0d1117&title_color=6E56CF&icon_color=6E56CF&text_color=c9d1d9&ring_color=6E56CF"
+      src="https://github-readme-stats.vercel.app/api?username=kuraimoss&show_icons=true&hide_border=true&bg_color=0d1117&title_color=6E56CF&icon_color=6E56CF&text_color=c9d1d9&ring_color=6E56CF"
     />
   </picture>
 
@@ -96,35 +96,25 @@ Engineering-first builder focused on maintainable architecture, predictable deli
   <picture>
     <source
       media="(prefers-color-scheme: dark)"
-      srcset="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=kuraimoss&layout=compact&hide_border=true&bg_color=0d1117&title_color=6E56CF&text_color=c9d1d9"
+      srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=kuraimoss&layout=compact&hide_border=true&bg_color=0d1117&title_color=6E56CF&text_color=c9d1d9"
     />
     <source
       media="(prefers-color-scheme: light)"
-      srcset="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=kuraimoss&layout=compact&hide_border=true&bg_color=ffffff&title_color=6E56CF&text_color=24292f"
+      srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=kuraimoss&layout=compact&hide_border=true&bg_color=ffffff&title_color=6E56CF&text_color=24292f"
     />
     <img
       height="165"
       alt="Top languages"
-      src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=kuraimoss&layout=compact&hide_border=true&bg_color=0d1117&title_color=6E56CF&text_color=c9d1d9"
+      src="https://github-readme-stats.vercel.app/api/top-langs/?username=kuraimoss&layout=compact&hide_border=true&bg_color=0d1117&title_color=6E56CF&text_color=c9d1d9"
     />
   </picture>
 </div>
 
 <div align="center">
-  <picture>
-    <source
-      media="(prefers-color-scheme: dark)"
-      srcset="https://github-readme-activity-graph.vercel.app/graph?username=kuraimoss&bg_color=0d1117&color=c9d1d9&line=6E56CF&point=c9d1d9&area=true&hide_border=true"
-    />
-    <source
-      media="(prefers-color-scheme: light)"
-      srcset="https://github-readme-activity-graph.vercel.app/graph?username=kuraimoss&bg_color=ffffff&color=24292f&line=6E56CF&point=24292f&area=true&hide_border=true"
-    />
-    <img
-      alt="Contribution graph"
-      src="https://github-readme-activity-graph.vercel.app/graph?username=kuraimoss&bg_color=0d1117&color=c9d1d9&line=6E56CF&point=c9d1d9&area=true&hide_border=true"
-    />
-  </picture>
+  <img
+    alt="GitHub contribution calendar"
+    src="https://ghchart.rshah.org/6E56CF/kuraimoss"
+  />
 </div>
 
 ## Featured Projects
