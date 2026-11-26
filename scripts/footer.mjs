@@ -1,68 +1,87 @@
-import { colors as c } from './lib/theme.mjs';
+import { themes } from './lib/theme.mjs';
 import { Typeset } from './lib/fonts.mjs';
-import { esc, n, svgDocument } from './lib/svg.mjs';
+import { esc, svgDocument } from './lib/svg.mjs';
 import { baseCss, REDUCED_MOTION } from './lib/motion.mjs';
-import { backdrop } from './lib/components.mjs';
-import { NAME_GRADIENT } from './header.mjs';
+import { chip, chipWidth, softBackdrop, waves } from './lib/components.mjs';
 
-/** A filled sine-like wave from x=0 to at least `span`, closed at `bottom`. */
-function wavePath({ span, period, amplitude, baseline, bottom }) {
-  let d = `M0 ${baseline}`;
-  for (let x = 0; x < span; x += period) {
-    d += `Q${n(x + period / 4)} ${n(baseline - amplitude)} ${n(x + period / 2)} ${baseline}`;
-    d += `Q${n(x + (period * 3) / 4)} ${n(baseline + amplitude)} ${n(x + period)} ${baseline}`;
-  }
-  return `${d}V${bottom}H0Z`;
-}
+const LAYOUTS = {
+  desktop: {
+    width: 960,
+    height: 220,
+    blobs: [
+      { cx: 120, cy: 40, rx: 260, ry: 160, color: 'lavender', drift: 'a' },
+      { cx: 860, cy: 50, rx: 240, ry: 150, color: 'mint', drift: 'c' },
+      { cx: 480, cy: 250, rx: 360, ry: 140, color: 'peach', drift: 'b' },
+    ],
+    sparkles: [
+      { x: 224, y: 70, r: 8, color: 'lavender', delay: 0 },
+      { x: 744, y: 64, r: 10, color: 'peach', delay: 1.4 },
+      { x: 862, y: 140, r: 5, color: 'mint', delay: 0.7 },
+    ],
+    title: { baseline: 90, size: 34 },
+    lines: ['Thoughtful interfaces · practical systems · products that work.'],
+    lineStart: 122,
+    lineSize: 16.5,
+    link: { y: 142 },
+    waves: [{ period: 320, amplitude: 6, offset: 26, color: 'lavender', seconds: 14 }, { period: 220, amplitude: 7, offset: 14, color: 'peach', seconds: 9 }],
+  },
+  mobile: {
+    width: 480,
+    height: 250,
+    blobs: [
+      { cx: 60, cy: 40, rx: 200, ry: 140, color: 'lavender', drift: 'a' },
+      { cx: 430, cy: 50, rx: 180, ry: 130, color: 'mint', drift: 'c' },
+      { cx: 240, cy: 280, rx: 260, ry: 120, color: 'peach', drift: 'b' },
+    ],
+    sparkles: [
+      { x: 52, y: 70, r: 7, color: 'lavender', delay: 0 },
+      { x: 430, y: 66, r: 8, color: 'peach', delay: 1.4 },
+    ],
+    title: { baseline: 84, size: 25 },
+    lines: ['Thoughtful interfaces. Practical systems.', 'Products that work.'],
+    lineStart: 116,
+    lineSize: 15,
+    link: { y: 160 },
+    waves: [{ period: 240, amplitude: 6, offset: 26, color: 'lavender', seconds: 14 }, { period: 160, amplitude: 7, offset: 14, color: 'peach', seconds: 9 }],
+  },
+};
 
-/** The closing banner: a call to action over slowly moving waves. */
-export async function renderFooter({ variant = 'desktop', embedFonts = true } = {}) {
-  const mobile = variant === 'mobile';
+/** The closing banner: a call to action over soft, slowly moving waves. */
+export async function renderFooter({ variant = 'desktop', theme: themeName = 'light', embedFonts = true } = {}) {
+  const layout = LAYOUTS[variant] ?? LAYOUTS.desktop;
+  const theme = themes[themeName];
   const ts = new Typeset();
-  const width = mobile ? 480 : 960;
-  const height = mobile ? 236 : 200;
+  const { width, height } = layout;
   const cx = width / 2;
-  const bg = backdrop({
+  const bg = softBackdrop({ theme, width, height, blobs: layout.blobs, sparkles: layout.sparkles });
+  const waveOpacity = theme.name === 'light' ? 0.8 : 0.32;
+  const wave = waves({
+    theme,
     width,
     height,
-    glows: [{ cx, cy: height + 30, rx: width * 0.55, ry: 170, color: c.brandBright, opacity: 0.3, className: 'drift-a' }],
+    layers: layout.waves.map((layer) => ({ ...layer, baseline: height - layer.offset, opacity: waveOpacity })),
   });
-  const waves = [
-    { className: 'wave-a', period: mobile ? 240 : 320, amplitude: 6, baseline: height - 30, color: c.accent, opacity: 0.12, seconds: 14 },
-    { className: 'wave-b', period: mobile ? 160 : 220, amplitude: 7, baseline: height - 18, color: c.brandBright, opacity: 0.16, seconds: 9 },
-  ];
-  const waveCss = waves
-    .map((wave) => `.${wave.className}{animation:${wave.className} ${wave.seconds}s linear infinite}@keyframes ${wave.className}{to{transform:translateX(-${wave.period}px)}}`)
-    .join('\n');
-  const waveShapes = waves
-    .map((wave) => `<path class="${wave.className}" d="${wavePath({ span: width + wave.period, period: wave.period, amplitude: wave.amplitude, baseline: wave.baseline, bottom: height })}" fill="${wave.color}" fill-opacity="${wave.opacity}"/>`)
-    .join('\n');
-
-  const lines = mobile
-    ? ['Thoughtful interfaces. Practical systems.', 'Products that work.']
-    : ['Thoughtful interfaces · practical systems · products that work.'];
-  const titleY = mobile ? 82 : 88;
-  const subtitleY = titleY + (mobile ? 34 : 36);
-  const lineGap = 22;
-  const linkY = subtitleY + (lines.length - 1) * lineGap + (mobile ? 36 : 34);
-
+  const linkLabel = 'kuraimos.com';
+  const linkWidth = chipWidth(linkLabel, { size: 13, icon: true });
+  const lines = layout.lines
+    .map((line, index) => `<text class="f-body" x="${cx}" y="${layout.lineStart + index * 22}" font-size="${layout.lineSize}" fill="${theme.muted}" text-anchor="middle">${esc(ts.use('body', line))}</text>`)
+    .join('');
   const body = `<g clip-path="url(#frame)">
 ${bg.back}
-${waveShapes}
-<text class="f-display rise d1" x="${cx}" y="${titleY}" font-size="${mobile ? 25 : 34}" letter-spacing="-1" fill="url(#name)" text-anchor="middle">${esc(ts.use('display', 'Let’s build something useful'))}<tspan fill="${c.accent}">${ts.use('display', '.')}</tspan></text>
-<g class="rise d2">${lines.map((line, index) => `<text class="f-body" x="${cx}" y="${subtitleY + index * lineGap}" font-size="${mobile ? 15 : 16.5}" fill="${c.textMuted}" text-anchor="middle">${esc(ts.use('body', line))}</text>`).join('')}</g>
-<text class="f-mono rise d3" x="${cx}" y="${linkY}" font-size="12.5" letter-spacing="1.6" fill="${c.accentSoft}" text-anchor="middle">${esc(ts.use('mono', 'KURAIMOS.COM ↗'))}</text>
+${wave.svg}
+<text class="f-display rise d1" x="${cx}" y="${layout.title.baseline}" font-size="${layout.title.size}" letter-spacing="-1" fill="${theme.ink}" text-anchor="middle">${esc(ts.use('display', 'Let’s build something useful'))}<tspan fill="${theme.accent}">${ts.use('display', '.')}</tspan></text>
+<g class="rise d2">${lines}</g>
+<g class="rise d3">${chip({ ts, theme, x: cx - linkWidth / 2, y: layout.link.y, label: linkLabel, tint: 'lavender', icon: 'globe', size: 13, height: 32 })}</g>
 </g>
 ${bg.border}`;
-
-  const css = [await ts.css({ embed: embedFonts }), baseCss(), bg.css, waveCss, REDUCED_MOTION].join('\n');
+  const css = [await ts.css({ embed: embedFonts }), baseCss(), bg.css, wave.css, REDUCED_MOTION].join('\n');
   return svgDocument({
     width,
     height,
     title: 'Let’s build something useful.',
     desc: 'Thoughtful interfaces, practical systems, and products that work. kuraimos.com',
     css,
-    defs: [bg.defs, NAME_GRADIENT].join(''),
+    defs: bg.defs,
     body,
   });
 }

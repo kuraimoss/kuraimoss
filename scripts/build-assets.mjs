@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 /**
  * Regenerates the static SVGs in assets/: the animated header and footer,
- * the link buttons, and the framed project previews.
+ * the link buttons, and the project previews, each in a light and a dark
+ * theme (`name.svg` and `name-dark.svg`).
  *
  *   node scripts/build-assets.mjs                      # everything
  *   node scripts/build-assets.mjs --only header,footer # a subset
@@ -15,6 +16,7 @@ import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parseArgs, promisify } from 'node:util';
+import { THEME_NAMES } from './lib/theme.mjs';
 import { renderHeader } from './header.mjs';
 import { renderFooter } from './footer.mjs';
 import { BUTTONS, renderButton } from './buttons.mjs';
@@ -30,12 +32,13 @@ const { values } = parseArgs({
 });
 const embedFonts = !values['no-embed-fonts'];
 const groups = new Set(values.only.split(',').map((group) => group.trim()));
+const suffix = (theme) => (theme === 'light' ? '' : `-${theme}`);
 
 async function save(path, svg) {
   const target = join(root, path);
   await mkdir(dirname(target), { recursive: true });
   await writeFile(target, svg);
-  console.log(`${path.padEnd(36)} ${(Buffer.byteLength(svg) / 1024).toFixed(1).padStart(6)} KB`);
+  console.log(`${path.padEnd(40)} ${(Buffer.byteLength(svg) / 1024).toFixed(1).padStart(6)} KB`);
 }
 
 /** Downloads a screenshot and crops it to an 800x400 WebP, keeping the top of the page. */
@@ -54,21 +57,27 @@ async function loadPreview(url) {
   }
 }
 
-if (groups.has('header')) {
-  await save('assets/header.svg', await renderHeader({ variant: 'desktop', embedFonts }));
-  await save('assets/header-mobile.svg', await renderHeader({ variant: 'mobile', embedFonts }));
-}
-if (groups.has('footer')) {
-  await save('assets/footer.svg', await renderFooter({ variant: 'desktop', embedFonts }));
-  await save('assets/footer-mobile.svg', await renderFooter({ variant: 'mobile', embedFonts }));
-}
-if (groups.has('buttons')) {
-  for (const button of BUTTONS) {
-    await save(`assets/buttons/${button.file}.svg`, await renderButton({ ...button, embedFonts }));
+for (const theme of THEME_NAMES) {
+  const end = suffix(theme);
+  if (groups.has('header')) {
+    await save(`assets/header${end}.svg`, await renderHeader({ variant: 'desktop', theme, embedFonts }));
+    await save(`assets/header-mobile${end}.svg`, await renderHeader({ variant: 'mobile', theme, embedFonts }));
+  }
+  if (groups.has('footer')) {
+    await save(`assets/footer${end}.svg`, await renderFooter({ variant: 'desktop', theme, embedFonts }));
+    await save(`assets/footer-mobile${end}.svg`, await renderFooter({ variant: 'mobile', theme, embedFonts }));
+  }
+  if (groups.has('buttons')) {
+    for (const button of BUTTONS) {
+      await save(`assets/buttons/${button.file}${end}.svg`, await renderButton({ ...button, theme, embedFonts }));
+    }
   }
 }
 if (groups.has('projects')) {
   for (const project of PROJECTS) {
-    await save(`assets/projects/${project.slug}.svg`, await renderProjectFrame(project, await loadPreview(project.image), { embedFonts }));
+    const image = await loadPreview(project.image);
+    for (const theme of THEME_NAMES) {
+      await save(`assets/projects/${project.slug}${suffix(theme)}.svg`, await renderProjectFrame(project, image, { theme }));
+    }
   }
 }

@@ -19,27 +19,27 @@ export const REDUCED_MOTION = '@media (prefers-reduced-motion:reduce){*{animatio
 
 /**
  * Builds a discrete timeline that types and then deletes each phrase in turn.
- * `events` lists every change of the visible character count; `windows` says
+ * `events` lists every change of the visible character count (and which phrase it belongs to); `windows` says
  * when each phrase is on screen. Times are in milliseconds within one cycle.
  */
 export function typingTimeline(phrases, { leadMs = 500, typeMs = 60, holdMs = 2400, deleteMs = 24, gapMs = 500 } = {}) {
-  const events = [{ t: 0, chars: 0 }];
+  const events = [{ t: 0, chars: 0, phrase: -1 }];
   const windows = [];
   let t = leadMs;
-  for (const phrase of phrases) {
+  phrases.forEach((phrase, index) => {
     const length = [...phrase].length;
     const start = t;
     for (let count = 1; count <= length; count += 1) {
-      events.push({ t, chars: count });
+      events.push({ t, chars: count, phrase: index });
       t += typeMs;
     }
     t += holdMs;
     for (let count = length - 1; count >= 0; count -= 1) {
-      events.push({ t, chars: count });
+      events.push({ t, chars: count, phrase: index });
       t += deleteMs;
     }
     windows.push({ start, end: t });
     t += gapMs;
-  }
+  });
   return { total: t, events, windows };
 }

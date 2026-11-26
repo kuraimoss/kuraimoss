@@ -1,13 +1,15 @@
 <div align="center">
   <picture>
+    <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/header-mobile-dark.svg" />
     <source media="(max-width: 600px)" srcset="assets/header-mobile.svg" />
-    <img src="assets/header.svg" width="100%" alt="Saint Ripen Tumanggor, S.Kom., Software Engineer. From the factory floor to the cloud: reliable platforms and AI-powered SaaS products across full-stack development, backend systems, cloud and DevOps, industrial automation, and AI. Open to work." />
+    <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg" />
+    <img src="assets/header.svg" width="100%" alt="kuraimos — Saint Ripen Tumanggor, S.Kom., Software Engineer. Full-stack development, backend and integration, cloud and DevOps, industrial automation, AI and computer vision, and SaaS products. Open to work." />
   </picture>
   <br /><br />
-  <a href="https://kuraimos.com"><img src="assets/buttons/portfolio.svg" height="40" alt="Portfolio: kuraimos.com" /></a>&nbsp;
-  <a href="https://www.linkedin.com/in/saintripentumanggor"><img src="assets/buttons/linkedin.svg" height="40" alt="LinkedIn" /></a>&nbsp;
-  <a href="https://www.instagram.com/kuraimos"><img src="assets/buttons/instagram.svg" height="40" alt="Instagram" /></a>&nbsp;
-  <a href="https://kuraimos.com/#contact"><img src="assets/buttons/contact.svg" height="40" alt="Contact" /></a>
+  <a href="https://kuraimos.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/buttons/portfolio-dark.svg" /><img src="assets/buttons/portfolio.svg" height="40" alt="Portfolio: kuraimos.com" /></picture></a>&nbsp;
+  <a href="https://www.linkedin.com/in/saintripentumanggor"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/buttons/linkedin-dark.svg" /><img src="assets/buttons/linkedin.svg" height="40" alt="LinkedIn" /></picture></a>&nbsp;
+  <a href="https://www.instagram.com/kuraimos"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/buttons/instagram-dark.svg" /><img src="assets/buttons/instagram.svg" height="40" alt="Instagram" /></picture></a>&nbsp;
+  <a href="https://kuraimos.com/#contact"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/buttons/contact-dark.svg" /><img src="assets/buttons/contact.svg" height="40" alt="Contact" /></picture></a>
   <br /><br />
   <a href="#about">About</a> &nbsp;&middot;&nbsp;
   <a href="#technical-focus">Technical focus</a> &nbsp;&middot;&nbsp;
@@ -40,14 +42,14 @@ Recent products and client work. More on [kuraimos.com](https://kuraimos.com/#pr
 <table>
   <tr>
     <td width="50%" valign="top">
-      <a href="https://jobfolio.kuraimos.com"><img src="assets/projects/jobfolio.svg" width="100%" alt="Jobfolio screenshot" /></a>
+      <a href="https://jobfolio.kuraimos.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/projects/jobfolio-dark.svg" /><img src="assets/projects/jobfolio.svg" width="100%" alt="Jobfolio screenshot" /></picture></a>
       <h3>Jobfolio</h3>
       <p>A CV and cover-letter builder with an interactive editor, responsive templates, and PDF export.</p>
       <p><code>Next.js</code> <code>TypeScript</code> <code>PostgreSQL</code> <code>Docker</code> <code>Tailwind CSS</code></p>
       <p><a href="https://jobfolio.kuraimos.com">Live site &#8599;</a></p>
     </td>
     <td width="50%" valign="top">
-      <a href="https://webmail.kuraimos.com"><img src="assets/projects/webmail.svg" width="100%" alt="Webmail screenshot" /></a>
+      <a href="https://webmail.kuraimos.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/projects/webmail-dark.svg" /><img src="assets/projects/webmail.svg" width="100%" alt="Webmail screenshot" /></picture></a>
       <h3>Webmail</h3>
       <p>A React client and Hapi API for a self-hosted, multi-domain mail server with a real-time inbox.</p>
       <p><code>React</code> <code>TypeScript</code> <code>Hapi</code> <code>PostgreSQL</code> <code>Docker</code></p>
@@ -56,14 +58,14 @@ Recent products and client work. More on [kuraimos.com](https://kuraimos.com/#pr
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <a href="https://snapnstyle.id"><img src="assets/projects/snapnstyle.svg" width="100%" alt="SNap &amp; Style screenshot" /></a>
+      <a href="https://snapnstyle.id"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/projects/snapnstyle-dark.svg" /><img src="assets/projects/snapnstyle.svg" width="100%" alt="SNap &amp; Style screenshot" /></picture></a>
       <h3>SNap &amp; Style payments</h3>
       <p>Payment gateway integration for a creative-services marketplace: checkout, signed webhooks, and status sync for every transaction state.</p>
       <p><code>Laravel</code> <code>SQLite</code> <code>Payment gateway</code></p>
       <p><a href="https://snapnstyle.id">Live site &#8599;</a></p>
     </td>
     <td width="50%" valign="top">
-      <a href="https://platdetection.kuraimos.com"><img src="assets/projects/plat-detection.svg" width="100%" alt="Plat Detection API screenshot" /></a>
+      <a href="https://platdetection.kuraimos.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/projects/plat-detection-dark.svg" /><img src="assets/projects/plat-detection.svg" width="100%" alt="Plat Detection API screenshot" /></picture></a>
       <h3>Plat Detection API</h3>
       <p>Reads vehicle license plates from a photo and looks up the registration region (Samsat).</p>
       <p><code>Go</code> <code>Python</code> <code>OpenCV</code> <code>NumPy</code></p>
@@ -72,14 +74,14 @@ Recent products and client work. More on [kuraimos.com](https://kuraimos.com/#pr
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <a href="https://wa.me/6283140919553?text=Haloo%20kuraBOT"><img src="assets/projects/kurabot.svg" width="100%" alt="kuraBOT illustration" /></a>
+      <a href="https://wa.me/6283140919553?text=Haloo%20kuraBOT"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/projects/kurabot-dark.svg" /><img src="assets/projects/kurabot.svg" width="100%" alt="kuraBOT illustration" /></picture></a>
       <h3>kuraBOT</h3>
       <p>A WhatsApp assistant that combines AI tools, media downloads, and group administration.</p>
       <p><code>Node.js</code> <code>Express</code> <code>OpenAI API</code></p>
       <p><a href="https://wa.me/6283140919553?text=Haloo%20kuraBOT">Chat on WhatsApp &#8599;</a></p>
     </td>
     <td width="50%" valign="top">
-      <a href="https://christoophotography.com"><img src="assets/projects/photography.svg" width="100%" alt="Full-Stack Photography screenshot" /></a>
+      <a href="https://christoophotography.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/projects/photography-dark.svg" /><img src="assets/projects/photography.svg" width="100%" alt="Full-Stack Photography screenshot" /></picture></a>
       <h3>Full-Stack Photography</h3>
       <p>A photography portfolio with an admin workspace for client quotations and invoices.</p>
       <p><code>Node.js</code> <code>Express</code> <code>SQLite</code> <code>Python</code></p>
@@ -118,7 +120,9 @@ Recent products and client work. More on [kuraimos.com](https://kuraimos.com/#pr
 ## Activity
 
 <picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kuraimoss/kuraimoss/output/dashboard-mobile-dark.svg" />
   <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/kuraimoss/kuraimoss/output/dashboard-mobile.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kuraimoss/kuraimoss/output/dashboard-dark.svg" />
   <img src="https://raw.githubusercontent.com/kuraimoss/kuraimoss/output/dashboard.svg" width="100%" alt="Contribution activity over the last 12 months: total contributions, current and longest streaks, active days, and a weekly bar chart." />
 </picture>
 
@@ -128,7 +132,9 @@ Recent products and client work. More on [kuraimos.com](https://kuraimos.com/#pr
 
 <a href="https://kuraimos.com">
   <picture>
+    <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/footer-mobile-dark.svg" />
     <source media="(max-width: 600px)" srcset="assets/footer-mobile.svg" />
+    <source media="(prefers-color-scheme: dark)" srcset="assets/footer-dark.svg" />
     <img src="assets/footer.svg" width="100%" alt="Let’s build something useful. Thoughtful interfaces, practical systems, and products that work. kuraimos.com" />
   </picture>
 </a>

@@ -4,7 +4,9 @@ import { checkWellFormed, esc, monoWidth } from '../lib/svg.mjs';
 import { typingTimeline } from '../lib/motion.mjs';
 import { Typeset } from '../lib/fonts.mjs';
 import { computeStreaks, formatDay, normalizeDays, summarize } from '../lib/github.mjs';
-import { renderHeader, NAME, PHRASES } from '../header.mjs';
+import { renderHeader, FULL_NAME, NAME, PHRASES } from '../header.mjs';
+import { textWidth } from '../lib/metrics.mjs';
+import { THEME_NAMES } from '../lib/theme.mjs';
 import { renderFooter } from '../footer.mjs';
 import { BUTTONS, renderButton } from '../buttons.mjs';
 import { PROJECTS, renderProjectFrame } from '../projects.mjs';
@@ -98,9 +100,9 @@ test('Typeset embeds fonts and falls back quietly when Google Fonts fails', asyn
     return new Response(new Uint8Array([1, 2, 3]));
   };
   const ts = new Typeset();
-  ts.use('mono', 'unique-glyphs-for-test');
+  ts.use('label', 'unique-glyphs-for-test');
   const css = await ts.css({ fetchImpl: fakeFetch });
-  assert.match(css, /@font-face\{font-family:'JetBrains Mono';[^}]*base64,AQID/);
+  assert.match(css, /@font-face\{font-family:'Plus Jakarta Sans';[^}]*font-weight:600;[^}]*base64,AQID/);
 
   const warnings = [];
   const failing = new Typeset();
@@ -111,30 +113,44 @@ test('Typeset embeds fonts and falls back quietly when Google Fonts fails', asyn
   assert.equal(warnings.length, 1);
 });
 
-test('every generated SVG is well formed, labelled, and respects reduced motion', async () => {
+test('textWidth matches the measured width of the wordmark', () => {
+  assert.ok(Math.abs(textWidth('kuraimos.', 100, 'display') - 491.7) < 1);
+  assert.ok(textWidth('Wide', 10, 'label') > textWidth('iii', 10, 'label'));
+});
+
+/** Every positioned rect (pills, chips, tiles, bars) must stay inside the canvas. */
+function overflowingRects(svg) {
+  const width = Number(svg.match(/viewBox="0 0 ([\d.]+) /)[1]);
+  return [...svg.matchAll(/<rect x="(-?[\d.]+)" y="-?[\d.]+" width="([\d.]+)"/g)]
+    .map((match) => ({ x: Number(match[1]), right: Number(match[1]) + Number(match[2]) }))
+    .filter((rect) => rect.x < 0 || rect.right > width + 0.01);
+}
+
+test('every generated SVG is well formed, labelled, fits its canvas, and respects reduced motion', async () => {
   const counts = Array.from({ length: 370 }, (_, index) => (index % 9 === 0 ? 0 : (index % 13) + 1));
   const summary = summarize(calendar('2025-11-22', counts, { restrictedContributions: 10 }));
   const image = { mime: 'image/webp', base64: 'AAAA' };
-  const documents = {
-    'header desktop': await renderHeader({ variant: 'desktop', embedFonts: false }),
-    'header mobile': await renderHeader({ variant: 'mobile', embedFonts: false }),
-    'footer desktop': await renderFooter({ variant: 'desktop', embedFonts: false }),
-    'footer mobile': await renderFooter({ variant: 'mobile', embedFonts: false }),
-    'dashboard desktop': await renderDashboard(summary, { variant: 'desktop', embedFonts: false }),
-    'dashboard mobile': await renderDashboard(summary, { variant: 'mobile', embedFonts: false }),
-    button: await renderButton({ ...BUTTONS[0], embedFonts: false }),
-    project: await renderProjectFrame(PROJECTS[0], image, { embedFonts: false }),
-  };
+  const documents = {};
+  for (const theme of THEME_NAMES) {
+    for (const variant of ['desktop', 'mobile']) {
+      documents[`header ${variant} ${theme}`] = await renderHeader({ variant, theme, embedFonts: false });
+      documents[`footer ${variant} ${theme}`] = await renderFooter({ variant, theme, embedFonts: false });
+      documents[`dashboard ${variant} ${theme}`] = await renderDashboard(summary, { variant, theme, embedFonts: false });
+    }
+    for (const button of BUTTONS) documents[`button ${button.file} ${theme}`] = await renderButton({ ...button, theme, embedFonts: false });
+    documents[`project ${theme}`] = await renderProjectFrame(PROJECTS[0], image, { theme });
+  }
   for (const [name, svg] of Object.entries(documents)) {
     assert.deepEqual(checkWellFormed(svg), [], name);
     assert.match(svg, /<title id="title">[^<]+<\/title>/, name);
+    assert.deepEqual(overflowingRects(svg), [], `${name} has shapes outside the canvas`);
+    if (!name.startsWith('project')) assert.match(svg, /prefers-reduced-motion:reduce/, name);
   }
-  for (const name of ['header desktop', 'header mobile', 'footer desktop', 'dashboard desktop', 'button']) {
-    assert.match(documents[name], /prefers-reduced-motion:reduce/, name);
+  for (const key of Object.keys(documents).filter((name) => name.startsWith('header'))) {
+    for (const phrase of PHRASES) assert.ok(documents[key].includes(esc(phrase)), `${key}: ${phrase}`);
+    assert.ok(documents[key].includes(`>${NAME}<tspan`), `${key}: wordmark`);
+    assert.ok(documents[key].includes(FULL_NAME), `${key}: full name`);
   }
-  for (const variant of ['header desktop', 'header mobile']) {
-    for (const phrase of PHRASES) assert.ok(documents[variant].includes(esc(phrase)), `${variant}: ${phrase}`);
-    for (const part of NAME) assert.ok(documents[variant].includes(part), `${variant}: ${part}`);
-  }
-  assert.match(documents['dashboard desktop'], /INCL\. PRIVATE WORK/);
+  assert.match(documents['dashboard desktop light'], /includes private work/);
+  assert.notEqual(documents['header desktop light'], documents['header desktop dark']);
 });

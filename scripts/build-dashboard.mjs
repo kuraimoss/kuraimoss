@@ -5,7 +5,8 @@
  *   GITHUB_TOKEN=... node scripts/build-dashboard.mjs --login kuraimoss --out dist
  *   node scripts/build-dashboard.mjs --fixture data.json --out dist      # offline
  *
- * The "Profile dashboard" workflow runs this every day and publishes dist/
+ * Writes light and dark variants for desktop and mobile. The "Profile
+ * dashboard" workflow runs this every day and publishes dist/
  * to the `output` branch, which the README links to.
  */
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
@@ -31,8 +32,14 @@ if (values['save-fixture']) await writeFile(values['save-fixture'], JSON.stringi
 
 const summary = summarize(data);
 await mkdir(values.out, { recursive: true });
-for (const [variant, name] of [['desktop', 'dashboard.svg'], ['mobile', 'dashboard-mobile.svg']]) {
-  const svg = await renderDashboard(summary, { variant, embedFonts: !values['no-embed-fonts'] });
+const outputs = [
+  ['desktop', 'light', 'dashboard.svg'],
+  ['desktop', 'dark', 'dashboard-dark.svg'],
+  ['mobile', 'light', 'dashboard-mobile.svg'],
+  ['mobile', 'dark', 'dashboard-mobile-dark.svg'],
+];
+for (const [variant, theme, name] of outputs) {
+  const svg = await renderDashboard(summary, { variant, theme, embedFonts: !values['no-embed-fonts'] });
   await writeFile(join(values.out, name), svg);
   console.log(`${join(values.out, name).padEnd(28)} ${(Buffer.byteLength(svg) / 1024).toFixed(1)} KB`);
 }
