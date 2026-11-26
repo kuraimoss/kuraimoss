@@ -4,7 +4,7 @@ import { checkWellFormed, esc, monoWidth } from '../lib/svg.mjs';
 import { typingTimeline } from '../lib/motion.mjs';
 import { Typeset } from '../lib/fonts.mjs';
 import { computeStreaks, formatDay, normalizeDays, summarize } from '../lib/github.mjs';
-import { renderHeader, PHRASES } from '../header.mjs';
+import { renderHeader, NAME, PHRASES } from '../header.mjs';
 import { renderFooter } from '../footer.mjs';
 import { BUTTONS, renderButton } from '../buttons.mjs';
 import { PROJECTS, renderProjectFrame } from '../projects.mjs';
@@ -132,6 +132,9 @@ test('every generated SVG is well formed, labelled, and respects reduced motion'
   for (const name of ['header desktop', 'header mobile', 'footer desktop', 'dashboard desktop', 'button']) {
     assert.match(documents[name], /prefers-reduced-motion:reduce/, name);
   }
-  for (const phrase of PHRASES) assert.ok(documents['header desktop'].includes(phrase), phrase);
+  for (const variant of ['header desktop', 'header mobile']) {
+    for (const phrase of PHRASES) assert.ok(documents[variant].includes(esc(phrase)), `${variant}: ${phrase}`);
+    for (const part of NAME) assert.ok(documents[variant].includes(part), `${variant}: ${part}`);
+  }
   assert.match(documents['dashboard desktop'], /INCL\. PRIVATE WORK/);
 });

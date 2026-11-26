@@ -1,7 +1,7 @@
 <div align="center">
   <picture>
     <source media="(max-width: 600px)" srcset="assets/header-mobile.svg" />
-    <img src="assets/header.svg" width="100%" alt="kuraimos, software engineer. From interface to infrastructure: full-stack web apps, mobile experiences, self-hosted services, and applied machine learning. Open to freelance work." />
+    <img src="assets/header.svg" width="100%" alt="Saint Ripen Tumanggor, S.Kom., Software Engineer. From the factory floor to the cloud: reliable platforms and AI-powered SaaS products across full-stack development, backend systems, cloud and DevOps, industrial automation, and AI. Open to work." />
   </picture>
   <br /><br />
   <a href="https://kuraimos.com"><img src="assets/buttons/portfolio.svg" height="40" alt="Portfolio: kuraimos.com" /></a>&nbsp;
@@ -10,6 +10,7 @@
   <a href="https://kuraimos.com/#contact"><img src="assets/buttons/contact.svg" height="40" alt="Contact" /></a>
   <br /><br />
   <a href="#about">About</a> &nbsp;&middot;&nbsp;
+  <a href="#technical-focus">Technical focus</a> &nbsp;&middot;&nbsp;
   <a href="#selected-work">Selected work</a> &nbsp;&middot;&nbsp;
   <a href="#toolbox">Toolbox</a> &nbsp;&middot;&nbsp;
   <a href="#activity">Activity</a>
@@ -17,12 +18,20 @@
 
 ## About
 
-I'm a software engineer who enjoys owning a product end to end, from the first screen to the server it runs on. I build web and mobile apps, run my own infrastructure, and put machine learning to work where it actually helps. Most of my day-to-day work happens in private repositories, so this page highlights what I can share.
+I'm **Saint Ripen Tumanggor, S.Kom.**, a software engineer and Bachelor of Computer Science graduate of Universitas Mikroskil. I build production systems end to end: web and SaaS products, the backend services and integrations behind them, the cloud infrastructure they run on, and the industrial and AI systems that connect software to the physical world.
 
-- **Building:** full-stack products with Next.js, React, Node.js, Laravel, and PostgreSQL
-- **Running:** self-hosted services on Linux with Docker, behind Cloudflare
-- **Applying:** computer vision in real products, from license-plate reading to face-recognition attendance
-- **Open to:** freelance projects and collaborations. [Get in touch &#8599;](https://kuraimos.com/#contact)
+I care about software that is reliable, maintainable, and genuinely useful to the people who depend on it. Much of my day-to-day work lives in private repositories, so this profile highlights the work I can share.
+
+**Open to** software engineering roles, freelance projects, and collaborations. [Get in touch &#8599;](https://kuraimos.com/#contact)
+
+## Technical focus
+
+- **Software Engineering & Full-Stack Development**<br />End-to-end web and mobile applications built with TypeScript, React, Next.js, Node.js, Laravel, and Flutter, designed to stay maintainable as they grow.
+- **Backend Engineering & System Integration**<br />APIs, data models, and integrations that connect services into one dependable system, from payment gateways with signed webhooks to real-time services.
+- **Cloud Computing, DevOps & Infrastructure**<br />Containerized services with Docker on Linux, automated delivery with GitHub Actions, and self-hosted infrastructure behind Cloudflare.
+- **Industrial Automation, IIoT, PLC, HMI & SCADA**<br />Bridging operational technology and IT: connecting PLC, HMI, and SCADA systems to modern software, data pipelines, and real-time monitoring through IIoT.
+- **Artificial Intelligence, Machine Learning & Computer Vision**<br />Applied models in real products, including license-plate recognition and face-recognition attendance with liveness detection.
+- **SaaS & Digital Product Development**<br />Taking digital products from idea to launch with product thinking, thoughtful UX, and steady iteration, as with Jobfolio, a CV and cover-letter platform.
 
 ## Selected work
 

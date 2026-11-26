@@ -14,6 +14,9 @@ export const ICONS = {
   activity: '<path d="M1.6 9.4h3.2l2.1-5.4 4.2 10 2.1-4.6h3.2"/>',
   flame: '<path d="M6.38 10.88A1.88 1.88 0 0 0 8.25 9c0-1.04-.38-1.5-.75-2.25-.8-1.61-.17-3.04 1.5-4.5.38 1.88 1.5 3.68 3 4.88 1.5 1.2 2.25 2.63 2.25 4.13a5.25 5.25 0 1 1-10.5 0c0-.87.33-1.72.75-2.25a1.88 1.88 0 0 0 1.88 1.88Z"/>', // adapted from Lucide (ISC)
   award: '<circle cx="9" cy="7" r="4.8"/><path d="m6.2 10.9-1.4 5.5L9 14.3l4.2 2.1-1.4-5.5"/>',
+  cpu: '<rect x="4.5" y="4.5" width="9" height="9" rx="1.8"/><rect x="7.2" y="7.2" width="3.6" height="3.6" rx=".6"/><path d="M7 1.8v2.7M11 1.8v2.7M7 13.5v2.7M11 13.5v2.7M1.8 7h2.7M1.8 11h2.7M13.5 7h2.7M13.5 11h2.7"/>',
+  cloud: '<path d="M13.13 14.25H6.75a5.25 5.25 0 1 1 5.03-6.75h1.35a3.38 3.38 0 1 1 0 6.75Z"/>', // adapted from Lucide (ISC)
+  sparkles: '<path d="M7.6 2.2 8.9 6.3l4.1 1.3-4.1 1.3-1.3 4.1-1.3-4.1-4.1-1.3 4.1-1.3 1.3-4.1Z"/><path d="m13.9 11.2.6 1.8 1.8.6-1.8.6-.6 1.8-.6-1.8-1.8-.6 1.8-.6.6-1.8Z"/>',
   calendar: '<rect x="2" y="3.4" width="14" height="12.6" rx="2.4"/><path d="M2 7.4h14M6 1.8v3.2M12 1.8v3.2"/>',
 };
 
@@ -74,15 +77,15 @@ export function statusPill({ ts, right, y, label, size = 11.5, letterSpacing = 1
   ].join('');
 }
 
-/** A row of outlined mono pills starting at `x`. */
-export function tagPills({ ts, x, y, labels, size = 11.5, letterSpacing = 1.4, height = 28, gap = 8 }) {
+/** A row of outlined mono pills starting at `x`. `padding` is the total horizontal padding per pill. */
+export function tagPills({ ts, x, y, labels, size = 11.5, letterSpacing = 1.4, height = 28, gap = 8, padding = 24 }) {
   let cursor = x;
   const parts = [];
   for (const label of labels) {
-    const width = monoWidth(label, size, letterSpacing) + 24;
+    const width = monoWidth(label, size, letterSpacing) + padding;
     parts.push(
       `<rect x="${n(cursor)}" y="${y}" width="${n(width)}" height="${height}" rx="${height / 2}" fill="${c.surfaceRaised}" fill-opacity=".7" stroke="${c.border}"/>`,
-      `<text class="f-mono" x="${n(cursor + 12)}" y="${n(y + height / 2 + size * 0.36)}" font-size="${size}" letter-spacing="${letterSpacing}" fill="${c.textMuted}">${esc(ts.use('mono', label))}</text>`,
+      `<text class="f-mono" x="${n(cursor + padding / 2)}" y="${n(y + height / 2 + size * 0.36)}" font-size="${size}" letter-spacing="${letterSpacing}" fill="${c.textMuted}">${esc(ts.use('mono', label))}</text>`,
     );
     cursor += width + gap;
   }

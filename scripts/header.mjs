@@ -4,24 +4,31 @@ import { esc, n, monoWidth, MONO_ADVANCE, svgDocument } from './lib/svg.mjs';
 import { baseCss, REDUCED_MOTION, typingTimeline } from './lib/motion.mjs';
 import { backdrop, brandMark, brandMarkDefs, drawIcon, statusPill, tagPills } from './lib/components.mjs';
 
+// One phrase per core competency, typed in turn.
 export const PHRASES = [
-  'building full-stack web apps',
-  'shipping mobile experiences',
-  'running self-hosted services',
-  'applying machine learning',
+  'engineering full-stack software',
+  'architecting backend systems',
+  'automating cloud infrastructure',
+  'integrating PLC, HMI & SCADA',
+  'deploying AI & computer vision',
+  'shipping SaaS & digital products',
 ];
 
 const PROMPT = String.fromCharCode(36); // the shell prompt sign
-const ROLE = 'SOFTWARE ENGINEER';
-const STATUS = 'OPEN TO FREELANCE';
-const TAGS = ['WEB', 'MOBILE', 'CLOUD', 'APPLIED ML'];
+export const NAME = ['Saint Ripen', 'Tumanggor'];
+const ROLE = 'SOFTWARE ENGINEER · S.KOM';
+const STATUS = 'OPEN TO WORK';
+const TAGLINE = ['From the factory floor to the cloud: I engineer', 'reliable platforms and AI-powered SaaS products.'];
+const TAGS = ['FULL-STACK', 'BACKEND', 'CLOUD', 'IIOT', 'AI/ML', 'SAAS'];
+// Data flows from industrial systems, through backend and cloud services, into AI-powered products.
 const LAYERS = [
-  { title: 'Interface', stack: 'react · next.js · flutter · kotlin', icon: 'layout' },
-  { title: 'Services & APIs', stack: 'node · go · python · laravel', icon: 'braces' },
-  { title: 'Infrastructure', stack: 'docker · linux · cloudflare', icon: 'layers' },
+  { title: 'Industrial automation', stack: 'iiot · plc · hmi · scada', icon: 'cpu' },
+  { title: 'Backend & cloud', stack: 'apis · integration · devops', icon: 'cloud' },
+  { title: 'AI & SaaS products', stack: 'full-stack · ml · computer vision', icon: 'sparkles' },
 ];
-const TITLE = 'kuraimos — software engineer';
-const DESC = 'From interface to infrastructure: full-stack web apps, mobile experiences, self-hosted services, and applied machine learning. Open to freelance work.';
+const CHIPS = ['AUTOMATION', 'CLOUD', 'AI & SAAS'];
+const TITLE = 'Saint Ripen Tumanggor, S.Kom. — Software Engineer';
+const DESC = 'Software engineer working from the factory floor to the cloud: full-stack and SaaS products, backend systems and integration, cloud and DevOps, industrial automation (IIoT, PLC, HMI, SCADA), and AI with computer vision. Open to work.';
 
 // One request travels down the stack every cycle and each layer lights up as it passes.
 const CYCLE = '4.6s';
@@ -78,13 +85,13 @@ function typingLine({ ts, x, y, size }) {
   return { defs, body };
 }
 
-/** Desktop: interface, services, and infrastructure stacked on a rail. */
+/** Desktop: industrial systems, backend and cloud, and AI products stacked on a rail. */
 function layerStack({ ts }) {
   const x = 588;
   const width = 324;
-  const height = 58;
+  const height = 64;
   const railX = 562;
-  const tops = [100, 178, 256];
+  const tops = [112, 210, 308];
   const centers = tops.map((top) => top + height / 2);
   const railPath = `M${railX} ${centers[0]}V${centers[2]}`;
   const nodes = LAYERS.map((layer, index) => {
@@ -114,7 +121,7 @@ ${drawIcon(layer.icon, x + 22, cy - 9, { color: c.accentSoft })}
 
 /** Mobile: the same three layers as a row of chips. */
 function layerChips({ ts, x, cy }) {
-  const labels = ['INTERFACE', 'SERVICES', 'INFRA'];
+  const labels = CHIPS;
   const size = 11;
   const letterSpacing = 1.2;
   const height = 30;
@@ -156,30 +163,41 @@ async function finish({ ts, width, height, bg, defs, body, embedFonts }) {
   });
 }
 
+/** The full name on two lines, with the brand dot after the surname. */
+function displayName({ ts, x, size, letterSpacing, baselines }) {
+  const [first, last] = NAME;
+  const attributes = `class="f-display" x="${x}" font-size="${size}" letter-spacing="${letterSpacing}" fill="url(#name)"`;
+  return [
+    `<text ${attributes} y="${baselines[0]}">${esc(ts.use('display', first))}</text>`,
+    `<text ${attributes} y="${baselines[1]}">${esc(ts.use('display', last))}<tspan fill="${c.accent}">${ts.use('display', '.')}</tspan></text>`,
+  ].join('');
+}
+
+function tagline({ ts, x, baselines, size }) {
+  return TAGLINE.map((line, index) => `<text class="f-body" x="${x}" y="${baselines[index]}" font-size="${size}" fill="${c.textMuted}">${esc(ts.use('body', line))}</text>`).join('\n');
+}
+
 async function renderDesktop(embedFonts) {
   const ts = new Typeset();
   const width = 960;
-  const height = 360;
+  const height = 420;
   const bg = backdrop({
     width,
     height,
     glows: [
-      { cx: 770, cy: 130, rx: 340, ry: 260, color: c.brandBright, opacity: 0.34, className: 'drift-a' },
-      { cx: 120, cy: 360, rx: 320, ry: 200, color: c.teal, opacity: 0.08, className: 'drift-b' },
+      { cx: 770, cy: 150, rx: 340, ry: 280, color: c.brandBright, opacity: 0.34, className: 'drift-a' },
+      { cx: 120, cy: 420, rx: 320, ry: 200, color: c.teal, opacity: 0.08, className: 'drift-b' },
     ],
   });
-  const typing = typingLine({ ts, x: 48, y: 206, size: 21 });
+  const typing = typingLine({ ts, x: 48, y: 266, size: 21 });
   const body = `<g clip-path="url(#frame)">
 ${bg.back}
 <g class="rise d1">${brandMark(48, 40)}<text class="f-mono" x="98" y="62.5" font-size="12.5" letter-spacing="2.2" fill="${c.textSubtle}">${esc(ts.use('mono', ROLE))}</text></g>
 <g class="rise d2">${statusPill({ ts, right: 912, y: 38, label: STATUS })}</g>
-<text class="f-display rise d2" x="45" y="160" font-size="84" letter-spacing="-3.4" fill="url(#name)">${esc(ts.use('display', 'kuraimos'))}<tspan fill="${c.accent}">${ts.use('display', '.')}</tspan></text>
+<g class="rise d2">${displayName({ ts, x: 46, size: 72, letterSpacing: -2.7, baselines: [146, 216] })}</g>
 <g class="rise d3">${typing.body}</g>
-<g class="rise d4">
-<text class="f-body" x="48" y="250" font-size="17.5" fill="${c.textMuted}">${esc(ts.use('body', 'From interface to infrastructure: I design, build,'))}</text>
-<text class="f-body" x="48" y="276" font-size="17.5" fill="${c.textMuted}">${esc(ts.use('body', 'and ship web, mobile, and AI-powered products.'))}</text>
-</g>
-<g class="rise d5">${tagPills({ ts, x: 48, y: 294, labels: TAGS })}</g>
+<g class="rise d4">${tagline({ ts, x: 48, baselines: [308, 334], size: 17.5 })}</g>
+<g class="rise d5">${tagPills({ ts, x: 48, y: 352, labels: TAGS })}</g>
 ${layerStack({ ts })}
 </g>
 ${bg.border}`;
@@ -189,28 +207,25 @@ ${bg.border}`;
 async function renderMobile(embedFonts) {
   const ts = new Typeset();
   const width = 480;
-  const height = 396;
+  const height = 436;
   const bg = backdrop({
     width,
     height,
     glows: [
-      { cx: 400, cy: 120, rx: 260, ry: 220, color: c.brandBright, opacity: 0.34, className: 'drift-a' },
-      { cx: 60, cy: 396, rx: 240, ry: 160, color: c.teal, opacity: 0.08, className: 'drift-b' },
+      { cx: 400, cy: 130, rx: 260, ry: 230, color: c.brandBright, opacity: 0.34, className: 'drift-a' },
+      { cx: 60, cy: 436, rx: 240, ry: 160, color: c.teal, opacity: 0.08, className: 'drift-b' },
     ],
   });
-  const typing = typingLine({ ts, x: 32, y: 186, size: 17 });
+  const typing = typingLine({ ts, x: 32, y: 232, size: 17 });
   const body = `<g clip-path="url(#frame)">
 ${bg.back}
-<g class="rise d1">${brandMark(32, 32, 32)}<text class="f-mono" x="74" y="52" font-size="11.5" letter-spacing="2" fill="${c.textSubtle}">${esc(ts.use('mono', ROLE))}</text></g>
+<g class="rise d1">${brandMark(32, 32, 32)}<text class="f-mono" x="74" y="52" font-size="11.5" letter-spacing="1.6" fill="${c.textSubtle}">${esc(ts.use('mono', ROLE))}</text></g>
 <g class="rise d2">${statusPill({ ts, right: 448, y: 35, label: STATUS, size: 11, letterSpacing: 1.2, height: 26 })}</g>
-<text class="f-display rise d2" x="30" y="142" font-size="64" letter-spacing="-2.6" fill="url(#name)">${esc(ts.use('display', 'kuraimos'))}<tspan fill="${c.accent}">${ts.use('display', '.')}</tspan></text>
+<g class="rise d2">${displayName({ ts, x: 30, size: 62, letterSpacing: -2.4, baselines: [128, 188] })}</g>
 <g class="rise d3">${typing.body}</g>
-<g class="rise d4">
-<text class="f-body" x="32" y="226" font-size="15.5" fill="${c.textMuted}">${esc(ts.use('body', 'From interface to infrastructure: I design,'))}</text>
-<text class="f-body" x="32" y="250" font-size="15.5" fill="${c.textMuted}">${esc(ts.use('body', 'build, and ship web, mobile, and AI products.'))}</text>
-</g>
-<g class="rise d5">${tagPills({ ts, x: 32, y: 270, labels: TAGS, size: 11, letterSpacing: 1.2 })}</g>
-<g class="rise d6">${layerChips({ ts, x: 32, cy: 346 })}</g>
+<g class="rise d4">${tagline({ ts, x: 32, baselines: [270, 294], size: 15.5 })}</g>
+<g class="rise d5">${tagPills({ ts, x: 32, y: 312, labels: TAGS, size: 11, letterSpacing: 1.2, gap: 6, padding: 18 })}</g>
+<g class="rise d6">${layerChips({ ts, x: 32, cy: 386 })}</g>
 </g>
 ${bg.border}`;
   return finish({ ts, width, height, bg, defs: typing.defs, body, embedFonts });
