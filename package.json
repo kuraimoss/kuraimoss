@@ -1,0 +1,14 @@
+{
+  "name": "kuraimoss-profile",
+  "private": true,
+  "type": "module",
+  "description": "Generators for the animated SVGs used in the kuraimoss GitHub profile README.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build:assets": "node scripts/build-assets.mjs",
+    "build:dashboard": "node scripts/build-dashboard.mjs",
+    "test": "node --test \"scripts/test/*.test.mjs\""
+  }
+}
