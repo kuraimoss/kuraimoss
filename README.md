@@ -1,115 +1,125 @@
 <div align="center">
   <picture>
     <source media="(max-width: 600px)" srcset="assets/header-mobile.svg" />
-    <img width="100%" src="assets/header.svg" alt="kuraimos - Full-stack and mobile engineer. From interface to infrastructure." />
+    <img src="assets/header.svg" width="100%" alt="kuraimos, software engineer. From interface to infrastructure: full-stack web apps, mobile experiences, self-hosted services, and applied machine learning. Open to freelance work." />
   </picture>
-  <br/><br/>
-  <a href="https://kuraimos.com"><img alt="Explore my portfolio" src="https://img.shields.io/badge/Portfolio-6E56CF?style=for-the-badge&amp;logo=googlechrome&amp;logoColor=white" /></a>
-  <a href="https://www.linkedin.com/in/saintripentumanggor"><img alt="Connect on LinkedIn" src="https://img.shields.io/badge/LinkedIn-242033?style=for-the-badge&amp;logo=linkedin&amp;logoColor=white" /></a>
-  <a href="https://www.instagram.com/kuraimos"><img alt="Find me on Instagram" src="https://img.shields.io/badge/Instagram-242033?style=for-the-badge&amp;logo=instagram&amp;logoColor=white" /></a>
-  <br/><br/>
+  <br /><br />
+  <a href="https://kuraimos.com"><img src="assets/buttons/portfolio.svg" height="40" alt="Portfolio: kuraimos.com" /></a>&nbsp;
+  <a href="https://www.linkedin.com/in/saintripentumanggor"><img src="assets/buttons/linkedin.svg" height="40" alt="LinkedIn" /></a>&nbsp;
+  <a href="https://www.instagram.com/kuraimos"><img src="assets/buttons/instagram.svg" height="40" alt="Instagram" /></a>&nbsp;
+  <a href="https://kuraimos.com/#contact"><img src="assets/buttons/contact.svg" height="40" alt="Contact" /></a>
+  <br /><br />
+  <a href="#about">About</a> &nbsp;&middot;&nbsp;
   <a href="#selected-work">Selected work</a> &nbsp;&middot;&nbsp;
   <a href="#toolbox">Toolbox</a> &nbsp;&middot;&nbsp;
-  <a href="#coding-activity">Coding activity</a>
+  <a href="#activity">Activity</a>
 </div>
 
-<br/>
+## About
+
+I'm a software engineer who enjoys owning a product end to end, from the first screen to the server it runs on. I build web and mobile apps, run my own infrastructure, and put machine learning to work where it actually helps. Most of my day-to-day work happens in private repositories, so this page highlights what I can share.
+
+- **Building:** full-stack products with Next.js, React, Node.js, Laravel, and PostgreSQL
+- **Running:** self-hosted services on Linux with Docker, behind Cloudflare
+- **Applying:** computer vision in real products, from license-plate reading to face-recognition attendance
+- **Open to:** freelance projects and collaborations. [Get in touch &#8599;](https://kuraimos.com/#contact)
 
 ## Selected work
 
-Web products, applied AI, and tools built for real workflows. Explore more at [kuraimos.com](https://kuraimos.com).
+Recent products and client work. More on [kuraimos.com](https://kuraimos.com/#projects).
 
 <table>
   <tr>
     <td width="50%" valign="top">
-      <a href="https://christoophotography.com/"><img width="100%" src="https://kuraimos.com/uploads/8fbaa281-2a85-467e-b1af-5bead8bff787.jpg" alt="Full-Stack Photography project preview" /></a>
-      <h3>Full-Stack Photography</h3>
-      <p>A photography portfolio with client quotation and invoice workflows.</p>
-      <p><a href="https://christoophotography.com/">Open project &#8599;</a></p>
+      <a href="https://jobfolio.kuraimos.com"><img src="assets/projects/jobfolio.svg" width="100%" alt="Jobfolio screenshot" /></a>
+      <h3>Jobfolio</h3>
+      <p>A CV and cover-letter builder with an interactive editor, responsive templates, and PDF export.</p>
+      <p><code>Next.js</code> <code>TypeScript</code> <code>PostgreSQL</code> <code>Docker</code> <code>Tailwind CSS</code></p>
+      <p><a href="https://jobfolio.kuraimos.com">Live site &#8599;</a></p>
     </td>
     <td width="50%" valign="top">
-      <a href="https://mediadownloader.web.id/"><img width="100%" src="https://kuraimos.com/uploads/e813a58a-09b4-4f75-9d51-1d4413763995.jpg" alt="Media Downloader project preview" /></a>
-      <h3>Media Downloader</h3>
-      <p>Video and audio downloads from YouTube, Instagram, and TikTok.</p>
-      <p><a href="https://mediadownloader.web.id/">Open project &#8599;</a></p>
+      <a href="https://webmail.kuraimos.com"><img src="assets/projects/webmail.svg" width="100%" alt="Webmail screenshot" /></a>
+      <h3>Webmail</h3>
+      <p>A React client and Hapi API for a self-hosted, multi-domain mail server with a real-time inbox.</p>
+      <p><code>React</code> <code>TypeScript</code> <code>Hapi</code> <code>PostgreSQL</code> <code>Docker</code></p>
+      <p><a href="https://webmail.kuraimos.com">Live site &#8599;</a></p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <a href="https://platdetection.kuraimos.com/"><img width="100%" src="https://kuraimos.com/uploads/3f68c7bc-46c9-45eb-a279-4883e001b6dc.jpg" alt="Plat Detection API project preview" /></a>
+      <a href="https://snapnstyle.id"><img src="assets/projects/snapnstyle.svg" width="100%" alt="SNap &amp; Style screenshot" /></a>
+      <h3>SNap &amp; Style payments</h3>
+      <p>Payment gateway integration for a creative-services marketplace: checkout, signed webhooks, and status sync for every transaction state.</p>
+      <p><code>Laravel</code> <code>SQLite</code> <code>Payment gateway</code></p>
+      <p><a href="https://snapnstyle.id">Live site &#8599;</a></p>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://platdetection.kuraimos.com"><img src="assets/projects/plat-detection.svg" width="100%" alt="Plat Detection API screenshot" /></a>
       <h3>Plat Detection API</h3>
-      <p>AI-powered license plate detection with Samsat region lookup.</p>
-      <p><a href="https://platdetection.kuraimos.com/">Open project &#8599;</a> &nbsp;&middot;&nbsp; <a href="https://github.com/kuraimoss/UAS-MachineLearning">Source code</a></p>
-    </td>
-    <td width="50%" valign="top">
-      <a href="https://cloudstorage.kuraimos.com/"><img width="100%" src="https://kuraimos.com/uploads/eb5a21b4-3016-4c74-b7fb-2ed152068428.jpg" alt="Cloud Storage project preview" /></a>
-      <h3>Cloud Storage</h3>
-      <p>A personal platform to store, organize, and share files online.</p>
-      <p><a href="https://cloudstorage.kuraimos.com/">Open project &#8599;</a> &nbsp;&middot;&nbsp; <a href="https://github.com/kuraimoss/cloud-storage">Source code</a></p>
+      <p>Reads vehicle license plates from a photo and looks up the registration region (Samsat).</p>
+      <p><code>Go</code> <code>Python</code> <code>OpenCV</code> <code>NumPy</code></p>
+      <p><a href="https://platdetection.kuraimos.com">Live site &#8599;</a> &nbsp;&middot;&nbsp; <a href="https://github.com/kuraimoss/UAS-MachineLearning">Source</a></p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <a href="https://luckydraw.kuraimos.com/"><img width="100%" src="https://kuraimos.com/uploads/b63e0194-0e56-4cc7-b29d-f63e2b30ad0f.jpg" alt="Lucky Draw project preview" /></a>
-      <h3>Lucky Draw</h3>
-      <p>An interactive random name picker for live events and digital draws.</p>
-      <p><a href="https://luckydraw.kuraimos.com/">Open project &#8599;</a> &nbsp;&middot;&nbsp; <a href="https://github.com/kuraimoss/luckydraw">Source code</a></p>
+      <a href="https://wa.me/6283140919553?text=Haloo%20kuraBOT"><img src="assets/projects/kurabot.svg" width="100%" alt="kuraBOT illustration" /></a>
+      <h3>kuraBOT</h3>
+      <p>A WhatsApp assistant that combines AI tools, media downloads, and group administration.</p>
+      <p><code>Node.js</code> <code>Express</code> <code>OpenAI API</code></p>
+      <p><a href="https://wa.me/6283140919553?text=Haloo%20kuraBOT">Chat on WhatsApp &#8599;</a></p>
     </td>
     <td width="50%" valign="top">
-      <a href="https://wa.me/6281943514940?text=Haloo%20kuraBOT"><img width="100%" src="https://kuraimos.com/uploads/6ffca5ab-5218-4c7d-819f-4fa68fa9d13f.jpg" alt="kuraBOT project preview" /></a>
-      <h3>kuraBOT</h3>
-      <p>A WhatsApp assistant with AI tools, downloads, and group automation.</p>
-      <p><a href="https://wa.me/6281943514940?text=Haloo%20kuraBOT">Open project &#8599;</a></p>
+      <a href="https://christoophotography.com"><img src="assets/projects/photography.svg" width="100%" alt="Full-Stack Photography screenshot" /></a>
+      <h3>Full-Stack Photography</h3>
+      <p>A photography portfolio with an admin workspace for client quotations and invoices.</p>
+      <p><code>Node.js</code> <code>Express</code> <code>SQLite</code> <code>Python</code></p>
+      <p><a href="https://christoophotography.com">Live site &#8599;</a></p>
     </td>
   </tr>
 </table>
 
+### More projects
+
+- **Face-recognition attendance:** teacher attendance with ArcFace recognition, liveness detection, GPS validation, and Excel reports. `Python` `FastAPI` `PostgreSQL` `OpenCV`
+- **MentalCare:** an expert system for early detection of teen mental-health issues using Dempster–Shafer. `Laravel` `MySQL` `Tailwind CSS` · [Demo](https://mentalcare.kuraimos.com) · [Source](https://github.com/kuraimoss/skripsiSepti)
+- **Cloud Storage:** a personal cloud to upload, organize, and share files. `Node.js` `Express` `Bootstrap` · [Demo](https://cloudstorage.kuraimos.com) · [Source](https://github.com/kuraimoss/cloud-storage)
+- **Media Downloader:** download video or audio from YouTube, Instagram, and TikTok by URL. `Node.js` `Express` · [Demo](https://mediadownloader.kuraimos.com)
+- **Lucky Draw:** a fair, interactive name picker for live events and giveaways. `Hapi` `Node.js` · [Demo](https://luckydraw.kuraimos.com) · [Source](https://github.com/kuraimoss/luckydraw)
+
 ## Toolbox
 
-<p align="center"><b>Interfaces</b><br/><br/><img height="44" alt="Interfaces technologies" src="https://skillicons.dev/icons?i=ts,js,react,nextjs,bootstrap,flutter,kotlin&amp;theme=dark&amp;perline=7" /></p>
+<p align="center">
+  <sub><b>FRONTEND &amp; MOBILE</b></sub><br /><br />
+  <img src="https://skillicons.dev/icons?i=ts,js,react,nextjs,tailwind,bootstrap,flutter,kotlin&amp;theme=dark" alt="TypeScript, JavaScript, React, Next.js, Tailwind CSS, Bootstrap, Flutter, Kotlin" />
+</p>
+<p align="center">
+  <sub><b>BACKEND &amp; DATA</b></sub><br /><br />
+  <img src="https://skillicons.dev/icons?i=nodejs,express,go,python,fastapi,php,laravel,postgres,mysql,sqlite,firebase&amp;theme=dark" alt="Node.js, Express, Go, Python, FastAPI, PHP, Laravel, PostgreSQL, MySQL, SQLite, Firebase" />
+</p>
+<p align="center">
+  <sub><b>CLOUD &amp; DEVOPS</b></sub><br /><br />
+  <img src="https://skillicons.dev/icons?i=docker,linux,ubuntu,bash,cloudflare,git,aws,gcp,azure&amp;theme=dark" alt="Docker, Linux, Ubuntu, Bash, Cloudflare, Git, AWS, Google Cloud, Azure" />
+</p>
+<p align="center">
+  <sub><b>MACHINE LEARNING</b></sub><br /><br />
+  <img src="https://skillicons.dev/icons?i=python,tensorflow,pytorch,sklearn,opencv&amp;theme=dark" alt="Python, TensorFlow, PyTorch, scikit-learn, OpenCV" />
+</p>
 
-<p align="center"><b>Services &amp; data</b><br/><br/><img height="44" alt="Services &amp; data technologies" src="https://skillicons.dev/icons?i=nodejs,go,python,postgresql,sqlite,firebase&amp;theme=dark&amp;perline=7" /></p>
+## Activity
 
-<p align="center"><b>Cloud &amp; infrastructure</b><br/><br/><img height="44" alt="Cloud &amp; infrastructure technologies" src="https://skillicons.dev/icons?i=docker,azure,aws,gcp,linux,ubuntu,bash&amp;theme=dark&amp;perline=7" /></p>
+<picture>
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/kuraimoss/kuraimoss/output/dashboard-mobile.svg" />
+  <img src="https://raw.githubusercontent.com/kuraimoss/kuraimoss/output/dashboard.svg" width="100%" alt="Contribution activity over the last 12 months: total contributions, current and longest streaks, active days, and a weekly bar chart." />
+</picture>
 
-<p align="center"><b>Applied machine learning</b><br/><br/><img height="44" alt="Applied machine learning technologies" src="https://skillicons.dev/icons?i=python,tensorflow,pytorch,sklearn,opencv&amp;theme=dark&amp;perline=7" /></p>
+<sub>Rebuilt every day by a <a href=".github/workflows/dashboard.yml">GitHub Actions workflow</a> straight from the GitHub GraphQL API, with no third-party stats service.</sub>
 
-## Coding activity
+<br /><br />
 
-<div align="center">
+<a href="https://kuraimos.com">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=kuraimoss&amp;show_icons=true&amp;hide_border=true&amp;rank_icon=github&amp;card_width=430&amp;bg_color=0d1117&amp;title_color=A78BFA&amp;icon_color=A78BFA&amp;text_color=c9d1d9&amp;ring_color=A78BFA&amp;cache_seconds=21600" />
-    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=kuraimoss&amp;show_icons=true&amp;hide_border=true&amp;rank_icon=github&amp;card_width=430&amp;bg_color=ffffff&amp;title_color=6E56CF&amp;icon_color=6E56CF&amp;text_color=24292f&amp;ring_color=6E56CF&amp;cache_seconds=21600" />
-    <img width="400" alt="GitHub public statistics with the GitHub icon" src="https://github-readme-stats.vercel.app/api?username=kuraimoss&amp;show_icons=true&amp;hide_border=true&amp;rank_icon=github&amp;card_width=430&amp;bg_color=0d1117&amp;title_color=A78BFA&amp;icon_color=A78BFA&amp;text_color=c9d1d9&amp;ring_color=A78BFA&amp;cache_seconds=21600" />
+    <source media="(max-width: 600px)" srcset="assets/footer-mobile.svg" />
+    <img src="assets/footer.svg" width="100%" alt="Let’s build something useful. Thoughtful interfaces, practical systems, and products that work. kuraimos.com" />
   </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.vercel.app?user=kuraimoss&amp;hide_border=true&amp;card_width=430&amp;background=0D1117&amp;ring=A78BFA&amp;fire=A78BFA&amp;currStreakLabel=A78BFA&amp;sideLabels=C9D1D9&amp;dates=C9D1D9&amp;sideNums=C9D1D9&amp;currStreakNum=C9D1D9" />
-    <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.vercel.app?user=kuraimoss&amp;hide_border=true&amp;card_width=430&amp;background=FFFFFF&amp;ring=6E56CF&amp;fire=6E56CF&amp;currStreakLabel=6E56CF&amp;sideLabels=24292F&amp;dates=24292F&amp;sideNums=24292F&amp;currStreakNum=24292F" />
-    <img width="400" alt="GitHub contribution streak" src="https://streak-stats.vercel.app?user=kuraimoss&amp;hide_border=true&amp;card_width=430&amp;background=0D1117&amp;ring=A78BFA&amp;fire=A78BFA&amp;currStreakLabel=A78BFA&amp;sideLabels=C9D1D9&amp;dates=C9D1D9&amp;sideNums=C9D1D9&amp;currStreakNum=C9D1D9" />
-  </picture>
-</div>
-
-<details>
-  <summary><b>Language mix &amp; contribution calendar</b></summary>
-  <br/>
-  <div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=kuraimoss&amp;layout=compact&amp;hide_border=true&amp;card_width=430&amp;bg_color=0d1117&amp;title_color=A78BFA&amp;text_color=c9d1d9&amp;cache_seconds=21600" />
-    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=kuraimoss&amp;layout=compact&amp;hide_border=true&amp;card_width=430&amp;bg_color=ffffff&amp;title_color=6E56CF&amp;text_color=24292f&amp;cache_seconds=21600" />
-    <img width="430" alt="Most used languages across public repositories" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kuraimoss&amp;layout=compact&amp;hide_border=true&amp;card_width=430&amp;bg_color=0d1117&amp;title_color=A78BFA&amp;text_color=c9d1d9&amp;cache_seconds=21600" />
-  </picture>
-    <br/><br/>
-    <img width="100%" src="https://ghchart.rshah.org/6E56CF/kuraimoss" alt="GitHub contribution calendar over the past year" />
-  </div>
-</details>
-
-<br/>
-
----
-
-<div align="center">
-  <h3>Let's build something useful.</h3>
-  <p>Thoughtful interfaces. Practical systems. Products that work.</p>
-  <a href="https://kuraimos.com">Explore the portfolio &#8599;</a> &nbsp;&middot;&nbsp;
-  <a href="https://www.linkedin.com/in/saintripentumanggor">Connect on LinkedIn</a>
-</div>
+</a>
