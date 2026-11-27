@@ -3,7 +3,7 @@
     <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/header-mobile-dark.svg" />
     <source media="(max-width: 600px)" srcset="assets/header-mobile.svg" />
     <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg" />
-    <img src="assets/header.svg" width="100%" alt="kuraimos — Saint Ripen Tumanggor, S.Kom., Software Engineer. Full-stack development, backend and integration, cloud and DevOps, industrial automation, AI and computer vision, and SaaS products. Open to work." />
+    <img src="assets/header.svg" width="100%" alt="kuraimos — Saint Ripen Tumanggor, S.Kom., Software Engineer. Full-stack development, backend and integration, cloud and DevOps, industrial automation, AI and computer vision, and SaaS products." />
   </picture>
   <br /><br />
   <a href="https://kuraimos.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/buttons/portfolio-dark.svg" /><img src="assets/buttons/portfolio.svg" height="40" alt="Portfolio: kuraimos.com" /></picture></a>&nbsp;

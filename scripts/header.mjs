@@ -3,12 +3,11 @@ import { Typeset } from './lib/fonts.mjs';
 import { esc, n, svgDocument } from './lib/svg.mjs';
 import { textWidth } from './lib/metrics.mjs';
 import { baseCss, REDUCED_MOTION, typingTimeline } from './lib/motion.mjs';
-import { chipRows, drawIcon, shadowFilter, softBackdrop, statusChip } from './lib/components.mjs';
+import { chipRows, drawIcon, shadowFilter, softBackdrop } from './lib/components.mjs';
 
 export const NAME = 'kuraimos';
 export const FULL_NAME = 'Saint Ripen Tumanggor, S.Kom.';
 export const ROLE = 'Software Engineer';
-const STATUS = 'Open to work';
 
 // One phrase per core competency, typed in turn.
 export const PHRASES = [
@@ -31,7 +30,7 @@ export const COMPETENCIES = {
 const C = COMPETENCIES;
 
 const TITLE = 'kuraimos — Saint Ripen Tumanggor, S.Kom., Software Engineer';
-const DESC = 'Software engineer working across full-stack development, backend and integration, cloud and DevOps, industrial automation (IIoT, PLC, HMI, SCADA), AI and computer vision, and SaaS products. Open to work.';
+const DESC = 'Software engineer working across full-stack development, backend and integration, cloud and DevOps, industrial automation (IIoT, PLC, HMI, SCADA), AI and computer vision, and SaaS products.';
 const HEADER_CSS = '.caret{animation:blink 1.1s steps(1,end) infinite}@keyframes blink{50%{opacity:0}}';
 
 /** A soft pill, centred on `cx`, that types each phrase in turn with a thin caret. */
@@ -74,50 +73,48 @@ function wordmark({ ts, theme, cx, baseline, size, letterSpacing }) {
 const LAYOUTS = {
   desktop: {
     width: 960,
-    height: 388,
+    height: 352,
     blobs: [
       { cx: 140, cy: 60, rx: 280, ry: 190, color: 'lavender', drift: 'a' },
       { cx: 860, cy: 80, rx: 260, ry: 180, color: 'mint', drift: 'c' },
-      { cx: 790, cy: 360, rx: 300, ry: 190, color: 'peach', drift: 'b' },
-      { cx: 160, cy: 380, rx: 260, ry: 170, color: 'sky', drift: 'c' },
-      { cx: 480, cy: 410, rx: 220, ry: 110, color: 'rose', drift: 'a' },
+      { cx: 790, cy: 330, rx: 300, ry: 190, color: 'peach', drift: 'b' },
+      { cx: 160, cy: 345, rx: 260, ry: 170, color: 'sky', drift: 'c' },
+      { cx: 480, cy: 375, rx: 220, ry: 110, color: 'rose', drift: 'a' },
     ],
     sparkles: [
-      { x: 196, y: 126, r: 9, color: 'lavender', delay: 0 },
-      { x: 772, y: 138, r: 11, color: 'peach', delay: 1.6 },
-      { x: 150, y: 300, r: 6, color: 'mint', delay: 0.8 },
-      { x: 812, y: 296, r: 7, color: 'rose', delay: 2.4 },
-      { x: 884, y: 214, r: 5, color: 'sky', delay: 3.1 },
-      { x: 82, y: 214, r: 5, color: 'butter', delay: 1.1 },
+      { x: 196, y: 96, r: 9, color: 'lavender', delay: 0 },
+      { x: 772, y: 106, r: 11, color: 'peach', delay: 1.6 },
+      { x: 150, y: 262, r: 6, color: 'mint', delay: 0.8 },
+      { x: 812, y: 258, r: 7, color: 'rose', delay: 2.4 },
+      { x: 884, y: 182, r: 5, color: 'sky', delay: 3.1 },
+      { x: 82, y: 182, r: 5, color: 'butter', delay: 1.1 },
     ],
-    status: { y: 40, size: 12.5, height: 30 },
-    name: { baseline: 154, size: 84, letterSpacing: -3 },
-    subtitle: [{ text: `${FULL_NAME} · ${ROLE}`, baseline: 192, size: 17, role: 'label', tone: 'inkSoft' }],
-    typing: { y: 212, size: 16, height: 44 },
-    chips: { top: 278, size: 13, height: 32, rows: [[C.fullstack, C.backend, C.cloud], [C.industrial, C.ai, C.saas]] },
+    name: { baseline: 113, size: 84, letterSpacing: -3 },
+    subtitle: [{ text: `${FULL_NAME} · ${ROLE}`, baseline: 151, size: 17, role: 'label', tone: 'inkSoft' }],
+    typing: { y: 171, size: 16, height: 44 },
+    chips: { top: 237, size: 13, height: 32, rows: [[C.fullstack, C.backend, C.cloud], [C.industrial, C.ai, C.saas]] },
   },
   mobile: {
     width: 480,
-    height: 400,
+    height: 360,
     blobs: [
       { cx: 70, cy: 50, rx: 200, ry: 150, color: 'lavender', drift: 'a' },
       { cx: 430, cy: 70, rx: 190, ry: 140, color: 'mint', drift: 'c' },
-      { cx: 400, cy: 380, rx: 220, ry: 160, color: 'peach', drift: 'b' },
-      { cx: 80, cy: 390, rx: 200, ry: 140, color: 'sky', drift: 'c' },
+      { cx: 400, cy: 345, rx: 220, ry: 160, color: 'peach', drift: 'b' },
+      { cx: 80, cy: 355, rx: 200, ry: 140, color: 'sky', drift: 'c' },
     ],
     sparkles: [
-      { x: 58, y: 118, r: 7, color: 'lavender', delay: 0 },
-      { x: 424, y: 124, r: 8, color: 'peach', delay: 1.6 },
-      { x: 448, y: 222, r: 5, color: 'mint', delay: 0.8 },
+      { x: 58, y: 80, r: 7, color: 'lavender', delay: 0 },
+      { x: 424, y: 86, r: 8, color: 'peach', delay: 1.6 },
+      { x: 448, y: 184, r: 5, color: 'mint', delay: 0.8 },
     ],
-    status: { y: 28, size: 12, height: 28 },
-    name: { baseline: 126, size: 64, letterSpacing: -2.4 },
+    name: { baseline: 84, size: 64, letterSpacing: -2.4 },
     subtitle: [
-      { text: FULL_NAME, baseline: 158, size: 15.5, role: 'label', tone: 'inkSoft' },
-      { text: ROLE, baseline: 180, size: 14, role: 'body', tone: 'muted' },
+      { text: FULL_NAME, baseline: 116, size: 15.5, role: 'label', tone: 'inkSoft' },
+      { text: ROLE, baseline: 138, size: 14, role: 'body', tone: 'muted' },
     ],
-    typing: { y: 198, size: 14.5, height: 42 },
-    chips: { top: 260, size: 12, height: 32, rowGap: 8, gap: 8, rows: [[C.fullstack, C.cloud], [C.backend, C.saas], [C.industrial, C.ai]] },
+    typing: { y: 156, size: 14.5, height: 42 },
+    chips: { top: 218, size: 12, height: 32, rowGap: 8, gap: 8, rows: [[C.fullstack, C.cloud], [C.backend, C.saas], [C.industrial, C.ai]] },
   },
 };
 
@@ -135,7 +132,6 @@ export async function renderHeader({ variant = 'desktop', theme: themeName = 'li
     .join('');
   const body = `<g clip-path="url(#frame)">
 ${bg.back}
-<g class="rise d1">${statusChip({ ts, theme, cx, label: STATUS, ...layout.status })}</g>
 <g class="rise d2">${wordmark({ ts, theme, cx, ...layout.name })}</g>
 <g class="rise d3">${subtitle}</g>
 <g class="rise d4">${typing.body}</g>
